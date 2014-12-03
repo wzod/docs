@@ -1,4 +1,6 @@
-The REMnux project provides [Docker](https://www.docker.com/) images of popular malware analysis tools, with the goal of allowing investigators to conveniently utilize difficult-to-install applications without having to install the REMnux distro. 
+# Docker Images for Malware Analysis
+
+The REMnux project provides [Docker](https://www.docker.com/) images of popular malware analysis tools, with the goal of allowing investigators to conveniently utilize difficult-to-install applications without having to install the REMnux distro.
 
 This section is a work in progress.
 
