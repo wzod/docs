@@ -3,6 +3,7 @@ site_url: http://remnux.org/docs
 site_description: Documentation for REMnux, a free toolkit for assisting malware analysts with reverse-engineering malicious software.
 site_favicon: favicon.ico
 theme: readthedocs
+google_analytics: UA-23590087-4
 
 pages:
 - ['index.md', 'Home']
