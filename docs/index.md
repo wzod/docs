@@ -2,7 +2,7 @@
 
 # REMnux Documentation
 
-This site provides  documentation for [REMnux](http://REMnux.org), a Linux toolkit for reverse-engineering and analyzing malware. REMnux strives to make it easier for forensic investigators and incident responders to start using the variety of freely-available tools that can examine malware, yet might be difficult to locate or set up.
+This site provides  documentation for [REMnux](https://REMnux.org), a Linux toolkit for reverse-engineering and analyzing malware. REMnux strives to make it easier for forensic investigators and incident responders to start using the variety of freely-available tools that can examine malware, yet might be difficult to find or set up.
 
 The heart of the project is the [REMnux Linux distribution](distro/get.md) based on Ubuntu This lightweight distro incorporates many tools for analyzing Windows and Linux malware, examining browser-based threats such as obfuscated JavaScript, exploring suspicious document files and taking apart other malicious artifacts. Investigators can also use the distro to intercept suspicious network traffic in an isolated lab when performing behavioral malware analysis.
 
