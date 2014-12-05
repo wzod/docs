@@ -8,7 +8,7 @@ Write documentation for tools installed on the REMnux distro to expand the tips 
 
 ## Dockerfile Configurations
 
-Create Dockerfile configs for building Docker images of malware analysis applications that are not yet present in the [REMnux Docker hub repository](https://registry.hub.docker.com/repos/remnux/). To learn more about this REMnux project, as well as to better understand Docker and how to run malware analysis apps in containers, see section [Docker Images for Malware Analysis](../containers/malware-analysis.md). It will also explain how you can contribute your images the REMnux collection.
+Create Dockerfile configs for building Docker images of malware analysis applications that are not yet present in the [REMnux Docker hub repository](https://registry.hub.docker.com/repos/remnux/). To learn more about this aspect of the REMnux project, as well as to better understand Docker and how to run apps in containers, see section [Docker Images for Malware Analysis](../containers/malware-analysis.md). That section also explains how you can contribute your images the REMnux collection.
 
 ## Issues and Fixes
 
