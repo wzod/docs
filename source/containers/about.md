@@ -14,7 +14,7 @@ Docker maintains the [Docker Hub Registry](https://hub.docker.com/) of public ap
 
 The first time you run a Dockerized application, Docker will automatically download it from the Registry; your system will need to be connected to the Internet at that time. Afterwards, Docker will use a local copy of the image without relying on the Internet. If the application's image has been updated and you are connected to the Internet, Docker will automatically update your image when you run the app.
 
-## What is Docker?
+## How Does Docker Work?
 
 Docker takes advantage of Linux kernels' ability to run applications in containers, which are sometimes described as "chroot on steroids." Containers provide each application an independent runtime environment, while avoiding the overhead of a full-fledged virtual machine.
 
