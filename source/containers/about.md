@@ -4,9 +4,9 @@ The REMnux project provides [Docker](https://www.docker.com/) images of popular 
 
 ## How to Run Dockerized Applications?
 
-To run REMnux-provided  application images, first you need to install Docker. This very easy to do on Linux (e.g. `apt-get install docker.io`) and relatively painless on Windows and OS X. Just follow [Docker's installation instructions](https://docs.docker.com/installation/#installation) for your operating system.
+To run REMnux-provided  application images, first you need to install Docker. This very easy to do on Linux (e.g. "`apt-get install docker.io`") and relatively painless on Windows and OS X. Just follow [Docker's installation instructions](https://docs.docker.com/installation/#installation) for your operating system.
 
-Once Docker is installed, you can run a Dockerized application by specifying the name of the desired app image. For example, to run the REMnux-provided image of [Thug](https://github.com/buffer/thug), a low-interaction honeyclient, you would type something like `docker run --rm -it remnux/thug bash`.
+Once Docker is installed, you can run a Dockerized application by specifying the name of the desired app image. For example, to run the REMnux-provided image of [Thug](https://github.com/buffer/thug), a low-interaction honeyclient, you would type something like "`docker run --rm -it remnux/thug bash`".
 
 ![Running Thug in Docker](containers/remnux-docker-thug-full.gif)
 
@@ -51,4 +51,4 @@ The [REMnux repository on the Docker Hub Registry](https://registry.hub.docker.c
 - Rekall memory forensic framework:  [remnux/rekall](https://registry.hub.docker.com/u/remnux/rekall/)
 - JSDetox malware analysis tool for JavaScript deobfuscation:  [remnux/jsdetox](https://registry.hub.docker.com/u/remnux/jsdetox/)
 
-Help expand this collection. You can create Dockerfile configs or building Docker images of malware analysis applications that are not yet present in the repository. Once you have built and tested your Dockerfile, [share it with Lenny Zeltser](http://zeltser.com/about/contact.html).
+Help expand this collection. You can create Dockerfile configs or building Docker images of malware analysis applications that are not yet present in the repository. Once you have built and tested your Dockerfile, [share it with Lenny Zeltser](http://zeltser.com/about/contact.html), so he can review it and, if appropriate, incorporate your contribution into the REMnux repository.
