@@ -67,7 +67,11 @@
                         
                             <li class="toctree-l2"><a href="#docker-images-for-malware-analysis">Docker Images for Malware Analysis</a></li>
                             
-                                <li><a class="toctree-l3" href="#using-and-building-docker-images">Using and Building Docker Images</a></li>
+                                <li><a class="toctree-l3" href="#how-to-run-dockerized-applications">How to Run Dockerized Applications?</a></li>
+                            
+                                <li><a class="toctree-l3" href="#what-is-docker">What is Docker?</a></li>
+                            
+                                <li><a class="toctree-l3" href="#benefits-of-applications-as-containers">Benefits of Applications as Containers</a></li>
                             
                                 <li><a class="toctree-l3" href="#available-application-images">Available Application Images</a></li>
                             
@@ -119,12 +123,40 @@
           <div role="main">
             <div class="section">
               <h1 id="docker-images-for-malware-analysis">Docker Images for Malware Analysis</h1>
-<p>The REMnux project provides <a href="https://www.docker.com/">Docker</a> images of popular malware analysis tools, with the goal of allowing investigators to conveniently utilize difficult-to-install applications without having to install the REMnux distro.</p>
-<p>This section is a work in progress.</p>
-<h2 id="using-and-building-docker-images">Using and Building Docker Images</h2>
-<p>If you are new to Docker, you can learn how to <a href="http://blog.zeltser.com/post/102956975282/docker-application-distribution">distribute and run apps inside containers</a>. You can see the images built to date on the <a href="https://registry.hub.docker.com/repos/remnux/">REMnux Docker hub repository.</a></p>
+<p>The REMnux project provides <a href="https://www.docker.com/">Docker</a> images of popular malware analysis tools, with the goal of allowing investigators to conveniently utilize difficult-to-install applications without having to install the REMnux distro. Such images could be compared to lightweight virtual machines; though they don&#8217;t offer the same level of isolation as real VMs, they provide a container within which the application can be encapsulated along with its dependencies.</p>
+<h2 id="how-to-run-dockerized-applications">How to Run Dockerized Applications?</h2>
+<p>To run REMnux-provided  application images, first you need to install Docker. This very easy to do on Linux (e.g. <code>apt-get install docker.io</code>) and relatively painless on Windows and OS X. Just follow <a href="https://docs.docker.com/installation/#installation">Docker&#8217;s installation instructions</a> for your operating system.</p>
+<p>Once Docker is installed, you can run a Dockerized application by specifying the name of the desired app image. For example, to run the REMnux-provided image of <a href="https://github.com/buffer/thug">Thug</a>, a low-interaction honeyclient, you would type something like <code>docker run --rm -it remnux/thug bash</code>.</p>
+<p><img alt="Running Thug in Docker" src="../../remnux-docker-thug-full.gif" /></p>
+<p>Docker maintains a public <a href="https://hub.docker.com/">registry of apps available as Docker images</a>, within which the <a href="https://registry.hub.docker.com/repos/remnux/">REMnux repository</a> of several malware analysis application images is present. For a listing of the available applications and guidelines for running them, see below.</p>
+<p>The first time you run a Dockerized application, Docker will automatically download it from the registry; your system will need to be connected to the Internet at that time. Afterwards, Docker will use a local copy of the image without relying on the Internet. If the application&#8217;s image has been updated and you are connected to the Internet, Docker will automatically update your image when you run the app.</p>
+<h2 id="what-is-docker">What is Docker?</h2>
+<p>Docker takes advantage of Linux kernels&#8217; ability to run applications in containers, which are sometimes described as &#8220;chroot on steroids.&#8221; Containers provide each application an independent runtime environment, while avoiding the overhead of a full-fledged virtual machine.</p>
+<p>Each container gets its own virtual file system, process listing and network stack; however, containers share the OS kernel with each other and the underlying host. In this respect, the isolation provided by containers is less robust than that of real virtual machines, which have independent kernels and run on top of a hypervisor. Yet, sharing the kernel allows containers to run faster and offers management features that are difficult to accomplish with traditional virtualization.</p>
+<p>An application distributed as a Docker image incorporates all the dependencies and configuration necessary for it to run, eliminating the need for end-users to install packages and troubleshoot dependencies. This approach allows developers to be certain that if the application worked in dev, it will work in production. Docker provides the tools necessary to build, run and manage applications packaged as Docker images.</p>
+<h2 id="benefits-of-applications-as-containers">Benefits of Applications as Containers</h2>
+<p>In many cases, it is convenient to launch malware analysis tools the traditional way by running them directly on the OS, for instance taking advantage of the packages preinstalled as part of the <a href="https://remnux.org/#distro">REMnux distribution</a>. Alternatively, you might want to run a tool without installing it directly onto your system, perhaps because you want to keep your system unclattered, or because it lacks the dependencies necessary to run the application.</p>
+<p>When running the app as a Docker container, you&#8217;re able to take advantage of the image developer&#8217;s efforts to figure out how to properly set up the application. Also, you get to benefit from any updates that the application&#8217;s developer and the image maintainer introduces without having to worry how to install them.</p>
+<p>Because Docker images are mostly independent of each other, you can run applications in environments separate from each other and the underlying system; this is especially useful when applications rely on conflicting dependencies. Because Docker containers are more lightweight than virtual machines, it&#8217;s more practical to dedicate a container to a single app than trying to set up a VM per application.</p>
+<p>A Redhat article outlines <a href="https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/7/html/7.0_Release_Notes/sect-Red_Hat_Enterprise_Linux-7.0_Release_Notes-Linux_Containers_with_Docker_Format-Advantages_of_Using_Docker.html">additional benefits that Docker offers</a>, which include:</p>
+<ul>
+<li>Rapid application deployment</li>
+<li>Portability across machines</li>
+<li>Version control and component reuse</li>
+<li>Simplified maintenance</li>
+</ul>
+<p>Lastly, those who are trying to install applications directly on their system without Docker can examine the Dockerfile config for the desired application to see explicit, scriptable instructions for installing the app into their own environment.</p>
+<p>Docker containers have their limitations and sometimes it&#8217;s easier to run applications the traditional way. By providing Docker images several popular malware analysis tools, in addition to offering a full Linux distro, REMnux gives you the flexibility to investigate malicious software using several approaches.</p>
 <h2 id="available-application-images">Available Application Images</h2>
-<p>This section will be expanded with information about finding, using and creating REMnux Docker-compatible application images.</p>
+<p>The <a href="https://registry.hub.docker.com/repos/remnux/">REMnux repository on the Docker Hub Registry</a> lists the images of malware analysis applications available as part of the project. These apps include:</p>
+<ul>
+<li>Google&#8217;s JavaScript engine for JavaScript deobfuscation: <a href="https://registry.hub.docker.com/u/remnux/v8/">remnux/v8</a></li>
+<li>Thug low-interaction honeyclient: <a href="https://registry.hub.docker.com/u/remnux/thug/">remnux/thug</a></li>
+<li>Viper binry analysis and management framework:  <a href="https://registry.hub.docker.com/u/remnux/viper/">remnux/viper</a></li>
+<li>Rekall memory forensic framework:  <a href="https://registry.hub.docker.com/u/remnux/rekall/">remnux/rekall</a></li>
+<li>JSDetox malware analysis tool for JavaScript deobfuscation:  <a href="https://registry.hub.docker.com/u/remnux/jsdetox/">remnux/jsdetox</a></li>
+</ul>
+<p>Help expand this collection. You can create Dockerfile configs or building Docker images of malware analysis applications that are not yet present in the repository. Once you have built and tested your Dockerfile, <a href="http://zeltser.com/about/contact.html">share it with Lenny Zeltser</a>.</p>
 
             </div>
           </div> 
