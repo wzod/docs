@@ -8,7 +8,7 @@ To run REMnux-provided  application images, first you need to install Docker. Th
 
 Once Docker is installed, you can run a Dockerized application by specifying the name of the desired app image. For example, to run the REMnux-provided image of [Thug](https://github.com/buffer/thug), a low-interaction honeyclient, you would type something like `docker run --rm -it remnux/thug bash`.
 
-![Running Thug in Docker](remnux-docker-thug-full.gif)
+![Running Thug in Docker](containers/remnux-docker-thug-full.gif)
 
 Docker maintains a public [registry of apps available as Docker images](https://hub.docker.com/), within which the [REMnux repository](https://registry.hub.docker.com/repos/remnux/) of several malware analysis application images is present. For a listing of the available applications and guidelines for running them, see below.
 
