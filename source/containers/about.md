@@ -10,9 +10,9 @@ Once Docker is installed, you can run a Dockerized application by specifying the
 
 ![Running Thug in Docker](containers/remnux-docker-thug-full.gif)
 
-Docker maintains a public [registry of apps available as Docker images](https://hub.docker.com/), within which the [REMnux repository](https://registry.hub.docker.com/repos/remnux/) of several malware analysis application images is present. For a listing of the available applications and guidelines for running them, see below.
+Docker maintains the [Docker Hub Registry](https://hub.docker.com/) of applications published as Docker images, within which the [REMnux repository](https://registry.hub.docker.com/repos/remnux/) of several malware analysis apps images is present. For a listing of the available applications and guidelines for running them, see below.
 
-The first time you run a Dockerized application, Docker will automatically download it from the registry; your system will need to be connected to the Internet at that time. Afterwards, Docker will use a local copy of the image without relying on the Internet. If the application's image has been updated and you are connected to the Internet, Docker will automatically update your image when you run the app.
+The first time you run a Dockerized application, Docker will automatically download it from the Registry; your system will need to be connected to the Internet at that time. Afterwards, Docker will use a local copy of the image without relying on the Internet. If the application's image has been updated and you are connected to the Internet, Docker will automatically update your image when you run the app.
 
 ## What is Docker?
 
