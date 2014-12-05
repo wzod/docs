@@ -4,6 +4,9 @@ site_description: Documentation for REMnux, a free toolkit for assisting malware
 site_favicon: favicon.ico
 theme: readthedocs
 markdown_extensions: [smartypants]
+copyright: Copyright &copy; 2014, Lenny Zeltser
+docs_dir: source
+include_search: false
 
 pages:
 - ['index.md', 'Home']
