@@ -13,5 +13,5 @@ pages:
 - ['distro/get.md', 'REMnux Distro', 'Get the REMnux Distro']
 - ['distro/tools.md', 'REMnux Distro', 'Tools Installed on REMnux']
 - ['distro/use.md', 'REMnux Distro', 'Using REMnux and Its Tools']
-- ['containers/about.md', 'Application Containers', 'Docker Images for Malware Analysis']
+- ['containers/malware-analysis.md', 'Application Containers', 'Docker Images for Malware Analysis']
 - ['expand/contribute.md', 'Expand REMnux', 'Contribute Your Expertise']
