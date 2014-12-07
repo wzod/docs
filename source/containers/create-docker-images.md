@@ -39,8 +39,8 @@ The followng `RUN` directive sets up the non-root user creatively named "nonroot
 
     RUN groupadd -r nonroot && \
       useradd -r -g nonroot -d /home/nonroot -s /sbin/nologin -c "Nonroot User" nonroot && \
-    mkdir /home/nonroot && \
-    chown -R nonroot:nonroot /home/nonroot
+      mkdir /home/nonroot && \
+      chown -R nonroot:nonroot /home/nonroot
 
 The next set of directives tells Docker to start running commands using the newly-set up "nonroot" user, defines the working directory to match that user's home directory and retrieves the code for the application we're installing (JSDetox, in this case):
 
@@ -78,7 +78,7 @@ Once you've created a Dockerfile that contains the desired directives, go to the
 
 Building the image can take some time, depending on the speed of your system and Internet connection, as Docker downloads the necessary packages and, if appropriate, compiles code.
 
-![Building a Docker Image](build-docker-image.png)
+![Building a Docker Image](containers/build-docker-image.png)
 
 After Docker builds the image, you can run it using the following command to get a shell in the container where your application has been installed:
 
