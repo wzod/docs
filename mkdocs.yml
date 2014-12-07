@@ -6,12 +6,21 @@ theme: readthedocs
 markdown_extensions: [smartypants]
 copyright: Copyright &copy; 2014, Lenny Zeltser
 docs_dir: source
-include_search: false
+include_search: true
 
 pages:
+
 - ['index.md', 'Home']
+
+# Distro
 - ['distro/get.md', 'REMnux Distro', 'Get the REMnux Distro']
 - ['distro/tools.md', 'REMnux Distro', 'Tools Installed on REMnux']
 - ['distro/use.md', 'REMnux Distro', 'Using REMnux and Its Tools']
+
+# Containers
 - ['containers/malware-analysis.md', 'Application Containers', 'Docker Images for Malware Analysis']
+- ['containers/run-apps.md', 'Application Containers', 'Running REMnux-Provided Images']
+- ['containers/create-docker-images.md', 'Application Containers', 'Creating Docker Images for REMnux']
+
+# Contribute
 - ['expand/contribute.md', 'Expand REMnux', 'Contribute Your Expertise']
