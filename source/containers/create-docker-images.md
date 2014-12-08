@@ -87,3 +87,7 @@ After Docker builds the image, you can run it using the following command to get
 Of course, "image-name" in the command above should correspond to the name you've assigned to the image. The `--rm` parameter in the command above directs Docker to automatically remove the container once it finishes running. This gets rid of any changes the application may have made to the local environment when it ran, but does not remove the cached image file that represents the app on your system. The `-it` parameter requests that Docker open an interactive session to the container and assign a pseudo-TTY to it so you can interact with it.
 
 Once you have built and tested your Dockerfile, [share it with Lenny Zeltser](http://zeltser.com/about/contact.html), so he can review it and, if appropriate, incorporate your contribution into the REMnux repository [on Github](https://github.com/REMnux/docker) and [on the Docker Hub Registry](https://registry.hub.docker.com/repos/remnux/).
+
+# Facilitating File System and Network Interactions with the Container
+
+The container will be isolated from the host system and its contents will typically disappear after it stops running. (This section needs to be expanded.)
