@@ -1,5 +1,3 @@
-# Creating Docker Images for REMnux
-
 Please contribute to the [REMnux collection of Docker images](https://registry.hub.docker.com/repos/remnux/) of malware analysis applications. You'll get a chance to experiment with Docker, become a master at setting up an application of your choice and expand the set of tools that other professionals can conveniently run for examining malicious software.
 
 As a starting point, read the REMnux page regarding [Docker and the notion of containers](malware-analysis.md). Also, familiarize yourself with the approaches to [running images that have already been created](run-apps.md) as part of the REMnux project. Next, review the guidelines and examples below. Lastly, read Docker's documentation for [building images using a Dockerfile](http://docs.docker.com/reference/builder/).
@@ -22,7 +20,7 @@ REMnux images use a minimal Docker image of Ubuntu 14.04 as a starting point, as
     FROM ubuntu:14.04
     MAINTAINER Lenny Zeltser (@lennyzeltser, www.zeltser.com)
 
-The `RUN` directive below tells Docker which commands to run  inside the container when building the image. Your Dockerfile file should include the "`apt-get update`" command, followed by "`apt-get install -y`" and a listing of the Ubuntu packages that the application requires. Remember that the starting point for the image is a minimal Ubuntu installation, so assume that a given package is not present unless you explicitly install it:
+The `RUN` directive below tells Docker which commands to run  inside the container when building the image. Your Dockerfile file should include the `apt-get update` command, followed by `apt-get install -y` and a listing of the Ubuntu packages that the application requires. Remember that the starting point for the image is a minimal Ubuntu installation, so assume that a given package is not present unless you explicitly install it:
 
     USER root
     RUN apt-get update && apt-get install -y \
