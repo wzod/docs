@@ -4,7 +4,7 @@ The [REMnux repository on the Docker Hub Registry](https://registry.hub.docker.c
 
 [Google's V8 JavaScript Engine](https://code.google.com/p/v8) can be useful for obfuscating JavaScript embedded in malicious browser pages and PDF files. The REMnux image of this application is available in the the Docker Hub Registry as [remnux/v8](https://registry.hub.docker.com/u/remnux/v8/).
 
-![Running remnux/v8](../remnux-docker-v8.gif)
+![Running remnux/v8](containers/remnux-docker-v8.gif)
 
 The easiest way to use V8 is to invoke it by first running `bash` or another shell within its container, and then running the `d8` command:
 
@@ -26,7 +26,7 @@ Once in the container, you might want to invoke the V8 application using a comma
 
 [Thug](https://github.com/buffer/thug) low-interaction honeyclient can assist with the analysis of suspicious websites. The REMnux image of this application is available in the the Docker Hub Registry as [remnux/thug](https://registry.hub.docker.com/u/remnux/thug/).
 
-![Running remnux/thug](../remnux-docker-thug.gif)
+![Running remnux/thug](containers/remnux-docker-thug.gif)
 
 The easiest way to use Thug is to invoke it by first running `bash` or another shell within its container, and then running the `./thug.py` command:
 
@@ -46,7 +46,7 @@ Once in the container, you might want to invoke the Thug application using a com
 
 [Viper](http://viper.li/) is "a binary management and analysis framework dedicated to malware and exploit researchers." It's useful to examine samples and maintain historical records about prior investigations. The REMnux image of this application is available in the the Docker Hub Registry as [remnux/viper](https://registry.hub.docker.com/u/remnux/viper/).
 
-![Running remnux/viper](../remnux-docker-viper.gif)
+![Running remnux/viper](containers/remnux-docker-viper.gif)
 
 One way to launch Viper is to simply run its container:
 
@@ -66,7 +66,7 @@ In the example above, the ~/viper-workdir directory will be shared between your 
 
 [Rekall](http://www.rekall-forensic.com/) is a collection of tools for the extraction and analysis of artifacts from memory images. The REMnux image of this application is available in the the Docker Hub Registry as [remnux/rekall](https://registry.hub.docker.com/u/remnux/rekall/).
 
-![Running remnux/rekall](../remnux-docker-rekall.gif)
+![Running remnux/rekall](containers/remnux-docker-rekall.gif)
 
 One way to launch Rekall is to start the container by first running `bash` or another shell in it, and then running the `rekall` command with the desired parameters:
 
@@ -88,7 +88,7 @@ Then connect to http://localhost:8000 using a web browser from your underlying h
 
 [JSDetox](http://www.relentless-coding.com/projects/jsdetox) is a web-based tool for analyzing and deobfuscating JavaScript. The REMnux image of this application is available in the the Docker Hub Registry as [remnux/jsdetox](https://registry.hub.docker.com/u/remnux/jsdetox/).
 
-![Running remnux/jsdetox](../remnux-docker-jsdetox.gif)
+![Running remnux/jsdetox](containers/remnux-docker-jsdetox.gif)
 
 One way to launch JSDetox, run its container like this:
 
