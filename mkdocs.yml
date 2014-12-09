@@ -6,7 +6,7 @@ theme: readthedocs
 markdown_extensions: [smartypants]
 copyright: Copyright &copy; 2014, Lenny Zeltser
 docs_dir: source
-include_search: true
+include_search: false
 
 pages:
 
