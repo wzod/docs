@@ -70,4 +70,4 @@ For more details, including each tool's description, see the REMnux v5 Tools [mi
 ## Install Additional Tools
 
 - Metasploit: [Metasploit](https://github.com/rapid7/metasploit-framework) is not installed on REMnux; however, [you can install it yourself](http://zeltser.com/reverse-malware/install-metasploit.html) if the need arises.
-- WIPSTER: You can easily install WIPSTER on REMnux by running the command "`/usr/local/sbin/install-wipster`".
+- WIPSTER: You can easily install WIPSTER on REMnux by running the command `/usr/local/sbin/install-wipster`.

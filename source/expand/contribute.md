@@ -8,8 +8,8 @@ Write documentation for tools installed on the REMnux distro to expand the tips 
 
 ## Dockerfile Configurations
 
-Create Dockerfile configs for building Docker images of malware analysis applications that are not yet present in the [REMnux Docker hub repository](https://registry.hub.docker.com/repos/remnux/). To learn more about this aspect of the REMnux project, as well as to better understand Docker and how to run apps in containers, see section [Docker Images for Malware Analysis](../containers/malware-analysis.md). That section also explains how you can contribute your images the REMnux collection.
+Create Dockerfile configs for building Docker images of malware analysis applications that are not yet present in the [REMnux Docker image collection](../containers/run-apps.md). If you are new to Docker, you can learn how to [distribute and run apps inside containers](../containers/malware-analysis.md) and how to [build your own images](../containers/create-docker-images.md). Once you have built and tested your Dockerfile, [share it with Lenny Zeltser](http://zeltser.com/about/contact.html).
 
 ## Issues and Fixes
 
-If you come across problems with tools available as part of REMnux, specially if you have suggestions for correcting the issues, please log them on the REMnux [distro repository](https://github.com/REMnux/distro/issues) or [Docker repository](https://github.com/REMnux/docker/issues) on Github.
+If you come across problems with tools available as part of REMnux, specially if you have suggestions for correcting the issues, please log them on the REMnux [distro repository](https://github.com/REMnux/distro/issues) or [Dockerfile repository](https://github.com/REMnux/docker/issues) on Github.
