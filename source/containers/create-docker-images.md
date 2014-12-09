@@ -12,7 +12,7 @@ The beginning of your Dockerfile should include comments that state which applic
     # from http://www.relentless-coding.com/projects/jsdetox
     #
     # To run this image after installing Docker, use the following command:
-    # sudo docker run –-rm -p 3000:3000 remnux/jsdetox
+    # sudo docker run --rm -p 3000:3000 remnux/jsdetox
     # Then, connect to http://localhost:3000 using your web browser.
 
 REMnux images use a minimal Docker image of Ubuntu 14.04 as a starting point, as designated by the `FROM` directive below. The `MAINTAINER` tag explains who created and/or maintains the Dockerfile:
@@ -86,6 +86,24 @@ Of course, "image-name" in the command above should correspond to the name you'v
 
 Once you have built and tested your Dockerfile, [share it with Lenny Zeltser](http://zeltser.com/about/contact.html), so he can review it and, if appropriate, incorporate your contribution into the REMnux repository [on Github](https://github.com/REMnux/docker) and [on the Docker Hub Registry](https://registry.hub.docker.com/repos/remnux/).
 
-# Facilitating File System and Network Interactions with the Container
+## Facilitating File System and Network Interactions
 
-The container will be isolated from the host system and its contents will typically disappear after it stops running. (This section needs to be expanded.)
+The container will be isolated from the host system: by default it will be able to communicate over the network in the outbound direction, but won't accept inbound traffic. Also, if the container is invoked with the `--rm` parameter, its contents will  disappear after it stops running. When building the image, you might need to anticipate the user's need to communicate with the app inside the container over the network or to pass files in and out of the container.
+
+**Accessing Network Ports in the Container**
+
+In the JSDetox example above, the application listens on TCP port 3000. In its default configuration, JSDetox listens on localhost, which would make its port inaccessible from outside its Docker container. This is why we launched JSDetox with the `-l $HOSTNAME` parameter--this directed the application to listen on the network interface that could be accessed from outside the container.
+
+Unless the user explicitly requests access to the container's port when launching its image, no ports will be accessible from the underlying system. Fortunately, Docker allows us to use the `-p` parameter to specify that a specific port within the container should be accessible from outside the container. For example, to access JSDetox' port 3000, the user needs to specify `-p 3000:3000`. This maps the container's port 3000 to the underlying host's port 3000, allowing the user to communicate with JSDetox by connecting to http://localhost:3000 using a web browser.
+
+**Sharing Files with the Container**
+
+There is no need to share files with JSDetox inside the container by using the file system, because this application interacts with the user through the web browser. In contrast, some files expect the user to provide input or share output via the file system. Docker supports the `-v` parameter to share a directory between the underlying host and the container.
+
+For example, let's say we wanted to share a folder with the container running the [Rekall Memory Forensic Framework](http://www.rekall-forensic.com/), which is [available from the REMnux Docker repository](https://registry.hub.docker.com/u/remnux/rekall/). If the memory image file that you'd like to analyze is located on your underlying host in the ~/files directory, you could share that directory with the Rekall container by specifying `-v ~/files:/home/nonroot/files` when running the application's image:
+
+    sudo docker run --rm -it -v ~/files:/home/nonroot/files remnux/rekall bash
+
+This maps the local ~/files directory to the /home/nonroot/files directory inside the container. The Rekall image is built to run the user-designated command (e.g., `bash`) as the user "nonroot". To ensure that the non-root user has access to the underlying hosts ~/files directory, the user of the app will need to make that directory world-accessible (i.e., `chmod a+xwr ~/files`) before launching the container.
+
+The comments in the beginning of your Dockerfile should provide guidelines for how the image should be launched to ensure that the user can provide files and communicate with ports.
