@@ -107,3 +107,19 @@ Then connect to http://localhost:3000 using a web browser from your underlying h
 To stop the JSDetox container, run `sudo docker ps -l` on your host to obtain the container ID, then use the `sudo docker stop `container-id` command and wait about a minute, where "container-id" is the ID of the JSDetox container.
 
 Help expand this collection! You can put together Dockerfile configs for building Docker images of malware analysis applications that are not yet present in the repository. To do this, follow the guidelines in the article [Creating Docker Images for REMnux](create-docker-images.md).
+
+## Radare2 Reverse Engineering Framework: remnux/radare2
+
+[Radare2](http://radare.org/) is a reverse-engineering framework that includes a disassembler and other capabilities useful for analyzing malicious code. The REMnux image of this application is available in the the Docker Hub Registry as [remnux/radare2](https://registry.hub.docker.com/u/remnux/radare2/).
+
+![Running remnux/radare2](containers/remnux-docker-radare2.gif)
+
+To use Radare2, first running `bash` or another shell in its container and then specify the `rd2` command with the desired parameters:
+
+    sudo docker run --rm -it remnux/radare2 bash
+
+However, you'll probably want to share a directory between the container and your underlying host, so that Radare2 can read your samples and save its output. To do this, invoke Docker with the `-v` parameter to specify a shared directory that the container and the underlying host will be able to access:
+
+    sudo docker run --rm -it -v ~/workdir:/home/nonroot/workdir remnux/radare2
+
+In the example above, the ~/workdir directory will be shared between your host and the container. Before running the command above, make sure that ~/workdir exists and that its permissions are world-readable (i.e., `chmod a+xwr`).
