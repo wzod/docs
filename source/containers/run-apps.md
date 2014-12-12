@@ -120,6 +120,6 @@ To use Radare2, first running `bash` or another shell in its container and then 
 
 However, you'll probably want to share a directory between the container and your underlying host, so that Radare2 can read your samples and save its output. To do this, invoke Docker with the `-v` parameter to specify a shared directory that the container and the underlying host will be able to access:
 
-    sudo docker run --rm -it -v ~/workdir:/home/nonroot/workdir remnux/radare2
+    sudo docker run --rm -it -v ~/workdir:/home/nonroot/workdir remnux/radare2 bash
 
 In the example above, the ~/workdir directory will be shared between your host and the container. Before running the command above, make sure that ~/workdir exists and that its permissions are world-readable (i.e., `chmod a+xwr`).
