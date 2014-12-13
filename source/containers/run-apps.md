@@ -1,4 +1,4 @@
-The [REMnux repository on the Docker Hub Registry](https://registry.hub.docker.com/repos/remnux/) lists the images of malware analysis applications available as part of the project. Guidelines for how to run Docker images of several of these apps are available below. For more information about this effort, see [Docker Images for Malware Analysis](malware-analysis.md).
+If you'd like to run the tools below without installing the full REMnux Linux distro, you can use the REMnux collection of [Docker Images for Malware Analysis](malware-analysis.md). The following explains which applications are available as images and how to run them, assuming you've installed Docker on your underlying host.
 
 ## Google's V8 JavaScript Engine: remnux/v8
 
