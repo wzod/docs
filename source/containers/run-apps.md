@@ -1,4 +1,4 @@
-If you'd like to run the tools below without installing the full REMnux Linux distro, you can use the REMnux collection of [Docker Images for Malware Analysis](malware-analysis.md). The following explains which applications are available as images and how to run them, assuming you've installed Docker on your underlying host.
+If you'd like to run the tools below without installing the full REMnux Linux distro, you can use the REMnux collection of [Docker Images for Malware Analysis](malware-analysis.md). The following page explains which applications are available as images and how to run them, assuming you've installed Docker on your underlying host.
 
 ## Google's V8 JavaScript Engine: remnux/v8
 
