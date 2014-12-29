@@ -250,10 +250,15 @@
 <li><a href="http://www.procdot.com/">ProcDOT</a>, <a href="https://github.com/merces/bashacks">bashhacks</a>, <a href="https://github.com/maaaaz/androwarn">Androwarn</a></li>
 </ul>
 <h2 id="install-additional-tools">Install Additional Tools</h2>
-<ul>
-<li>Metasploit: <a href="https://github.com/rapid7/metasploit-framework">Metasploit</a> is not installed on REMnux; however, <a href="http://zeltser.com/reverse-malware/install-metasploit.html">you can install it yourself</a> if the need arises.</li>
-<li>WIPSTER: You can easily install WIPSTER on REMnux by running the command <code>/usr/local/sbin/install-wipster</code>.</li>
-</ul>
+<p><a href="https://github.com/rapid7/metasploit-framework">Metasploit</a> is not installed on REMnux; however, <a href="http://zeltser.com/reverse-malware/install-metasploit.html">you can install it yourself</a> if the need arises.</p>
+<p><a href="https://github.com/TheDr1ver/WIPSTER">WIPSTER</a> offers a web-based interface to several REMnux tools. You can easily install WIPSTER on REMnux by running the command <code>/usr/local/sbin/install-wipster</code>.</p>
+<p><a name="vtTool"></a><a href="https://code.google.com/p/malware-crawler/wiki/vtTool">vtTool</a> offers a convenient way of determining the likely name of malware by querying VirusTotal using the file&#8217;s hash via the command line. To install it on REMnux after connecting the REMnux system to the Internet, run the following commands:</p>
+<pre><code>sudo apt-get -y install python-numpy python-scipy python-levenshtein
+sudo pip install fuzzywuzzy scikit-learn
+wget https://malware-crawler.googlecode.com/svn/MalwareCrawler/src/tools/vtTool.py
+chmod a+xr vtTool.py
+sudo mv vtTool.py /usr/local/bin
+</code></pre>
 
               
             </div>
