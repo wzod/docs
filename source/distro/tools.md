@@ -73,7 +73,7 @@ For more details, including each tool's description, see the REMnux v5 Tools [mi
 
 [WIPSTER](https://github.com/TheDr1ver/WIPSTER) offers a web-based interface to several REMnux tools. You can easily install WIPSTER on REMnux by running the command `/usr/local/sbin/install-wipster`.
 
-[vtTool](https://code.google.com/p/malware-crawler/wiki/vtTool) offers a convenient way of determining the likely name of malware by querying VirusTotal using the file's hash via the command line. To install it on REMnux after connecting the REMnux system to the Internet, run the following commands:
+<a name="vtTool"></a>[vtTool](https://code.google.com/p/malware-crawler/wiki/vtTool) offers a convenient way of determining the likely name of malware by querying VirusTotal using the file's hash via the command line. To install it on REMnux after connecting the REMnux system to the Internet, run the following commands:
 
     sudo apt-get -y install python-numpy python-scipy python-levenshtein
     sudo pip install fuzzywuzzy scikit-learn
