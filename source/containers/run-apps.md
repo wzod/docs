@@ -1,4 +1,6 @@
-If you'd like to run the tools below without installing the full REMnux Linux distro, you can use the REMnux collection of [Docker Images for Malware Analysis](malware-analysis.md). The following page explains which applications are available as images and how to run them, assuming you've installed Docker on your underlying host. Once you've installed the desired image, as outlined below, you can update it by using the `docker pull` command (e.g., `sudo docker pull remnux/radare2`). To update all locally-cached images, run:
+If you'd like to run the tools below without installing the full REMnux Linux distro, you can use the REMnux collection of [Docker Images for Malware Analysis](malware-analysis.md). The following page explains which applications are available as images and how to run them, assuming you've installed Docker on your underlying host.
+
+Once you've installed the desired image, as outlined below, you can update it by using the `docker pull` command (e.g., `sudo docker pull remnux/radare2`). To update all locally-cached images, run:
 
     sudo docker images |cut -d' ' -f1 | grep -v REPOSITORY | xargs -I %s sudo docker pull %s
 
