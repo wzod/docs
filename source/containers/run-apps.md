@@ -118,11 +118,7 @@ Help expand this collection! You can put together Dockerfile configs for buildin
 
 ![Running remnux/radare2](containers/remnux-docker-radare2.gif)
 
-To use Radare2, first run `bash` or another shell in its container and then specify the `rd2` command with the desired parameters:
-
-    sudo docker run --rm -it remnux/radare2 bash
-
-However, you'll probably want to share a directory between the container and your underlying host, so that Radare2 can read your samples and save its output. To do this, invoke Docker with the `-v` parameter to specify a shared directory that the container and the underlying host will be able to access:
+To use Radare2, first run `bash` or another shell in its container and then specify the `rd2` command with the desired parameters. You'll probably want to share a directory between the container and your underlying host, so that Radare2 can read your samples and save its output. To do this, invoke Docker with the `-v` parameter to specify a shared directory that the container and the underlying host will be able to access:
 
     sudo docker run --rm -it -v ~/workdir:/home/nonroot/workdir remnux/radare2 bash
 
@@ -134,11 +130,7 @@ In the example above, the ~/workdir directory will be shared between your host a
 
 ![Running remnux/pescanner](containers/remnux-docker-pescanner.gif)
 
-To use pescanner, first `bash` or another shell in its container and then specify the `pescanner` command, followed by the path to the file you'd like to examine:
-
-    sudo docker run --rm -it remnux/pescanner bash
-
-However, you'll probably want to share a directory between the container and your underlying host, so that pescanner can access your samples. To do this, invoke Docker with the `-v` parameter to specify a shared directory that the container and the underlying host will be able to access:
+To use pescanner, first run `bash` or another shell in its container and then specify the `pescanner` command, followed by the path to the file you'd like to examine. You'll probably want to share a directory between the container and your underlying host, so that pescanner can access your samples. To do this, invoke Docker with the `-v` parameter to specify a shared directory that the container and the underlying host will be able to access:
 
     sudo docker run --rm -it -v ~/workdir:/home/nonroot/workdir remnux/pescanner bash
 
