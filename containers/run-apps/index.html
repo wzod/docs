@@ -111,6 +111,9 @@
                             <li class="toctree-l3"><a href="#radare2-reverse-engineering-framework-remnuxradare2">Radare2 Reverse Engineering Framework: remnux/radare2</a></li>
                             
                         
+                            <li class="toctree-l3"><a href="#pescanner-static-malware-analysis-tool-remnuxpescanner">Pescanner Static Malware Analysis Tool: remnux/pescanner</a></li>
+                            
+                        
                         </ul>
                     
                 </li>
@@ -239,11 +242,21 @@
 <h2 id="radare2-reverse-engineering-framework-remnuxradare2">Radare2 Reverse Engineering Framework: remnux/radare2</h2>
 <p><a href="http://radare.org/">Radare2</a> is a reverse-engineering framework that includes a disassembler and other capabilities useful for analyzing malicious code. The REMnux image of this application is available in the the Docker Hub Registry as <a href="https://registry.hub.docker.com/u/remnux/radare2/">remnux/radare2</a>.</p>
 <p><img alt="Running remnux/radare2" src="../../containers/remnux-docker-radare2.gif" /></p>
-<p>To use Radare2, first running <code>bash</code> or another shell in its container and then specify the <code>rd2</code> command with the desired parameters:</p>
+<p>To use Radare2, first run <code>bash</code> or another shell in its container and then specify the <code>rd2</code> command with the desired parameters:</p>
 <pre><code>sudo docker run --rm -it remnux/radare2 bash
 </code></pre>
 <p>However, you&#8217;ll probably want to share a directory between the container and your underlying host, so that Radare2 can read your samples and save its output. To do this, invoke Docker with the <code>-v</code> parameter to specify a shared directory that the container and the underlying host will be able to access:</p>
 <pre><code>sudo docker run --rm -it -v ~/workdir:/home/nonroot/workdir remnux/radare2 bash
+</code></pre>
+<p>In the example above, the ~/workdir directory will be shared between your host and the container. Before running the command above, make sure that ~/workdir exists and that its permissions are world-readable (i.e., <code>chmod a+xwr</code>).</p>
+<h2 id="pescanner-static-malware-analysis-tool-remnuxpescanner">Pescanner Static Malware Analysis Tool: remnux/pescanner</h2>
+<p><a href="https://code.google.com/p/malwarecookbook/source/browse/trunk/3/8/pescanner.py">Pescaner</a> is a static malware analysis tool for examining suspicious Windows PE files. It was created by created by <a href="http://www.mnin.org/">Michael Ligh</a> and distributed with the book <a href="http://www.malwarecookbook.com/">Malware Analyst Cookbook</a>. The REMnux collection uses the <a href="https://github.com/hiddenillusion/AnalyzePE/blob/master/pescanner.py">version of this tool</a> that was modified by <a href="https://www.linkedin.com/in/glennpedwardsjr">Glenn P. Edwards Jr.</a> to introduce <a href="https://www.mandiant.com/blog/tracking-malware-import-hashing/">imphash</a> support.</p>
+<p><img alt="Running remnux/pescanner" src="../../containers/remnux-docker-pescanner.gif" /></p>
+<p>To use pescanner, first <code>bash</code> or another shell in its container and then specify the <code>pescanner</code> command, followed by the path to the file you&#8217;d like to examine:</p>
+<pre><code>sudo docker run --rm -it remnux/pescanner bash
+</code></pre>
+<p>However, you&#8217;ll probably want to share a directory between the container and your underlying host, so that pescanner can access your samples. To do this, invoke Docker with the <code>-v</code> parameter to specify a shared directory that the container and the underlying host will be able to access:</p>
+<pre><code>sudo docker run --rm -it -v ~/workdir:/home/nonroot/workdir remnux/pescanner bash
 </code></pre>
 <p>In the example above, the ~/workdir directory will be shared between your host and the container. Before running the command above, make sure that ~/workdir exists and that its permissions are world-readable (i.e., <code>chmod a+xwr</code>).</p>
 
