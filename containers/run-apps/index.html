@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  <link rel="canonical" href="https://remnux.org/docs/containers/run-apps/">
+  <link rel="shortcut icon" href="../../favicon.ico">
+  
+  
+  <title>Running REMnux-Provided Images - REMnux Docs</title>
+  
+
+  
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="../../css/highlight.css">
+
+  <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
+  <script type="text/javascript" src="../../js/highlight.pack.js"></script>
+  <script src="../../js/tipuesearch/tipuesearch_content.js"></script>
+  <script src="../../js/tipuesearch/tipuesearch.js"></script>
+  <script src="../../js/tipuesearch/tipuesearch_set.js"></script>
+  <script src="../../js/theme.js"></script>
+
+  <style>
+    body {font-size: 90%;}
+    pre, code {font-size: 100%;}
+    h3, h4, h5, h6 {color: #2980b9; font-weight: 300}
+  </style> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href="../.." class="icon icon-home"> REMnux Docs</a>
+        <!--
+
+<div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+-->
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+      <ul class="current">
+    
+        
+            <span>REMnux Distro</span>
+            
+                <li class="toctree-l2 ">
+                    <a class="" href="../../distro/get">Get the REMnux Distro</a>
+                    
+                </li>
+            
+                <li class="toctree-l2 ">
+                    <a class="" href="../../distro/tools">Tools Installed on REMnux</a>
+                    
+                </li>
+            
+                <li class="toctree-l2 ">
+                    <a class="" href="../../distro/use">Using REMnux and Its Tools</a>
+                    
+                </li>
+            
+        
+
+    
+        
+            <span>Application Containers</span>
+            
+                <li class="toctree-l2 ">
+                    <a class="" href="../malware-analysis">Docker Images for Malware Analysis</a>
+                    
+                </li>
+            
+                <li class="toctree-l2 current">
+                    <a class="current" href=".">Running REMnux-Provided Images</a>
+                    
+                        <ul>
+                        
+                            <li class="toctree-l3"><a href="#googles-v8-javascript-engine-remnuxv8">Google&#8217;s V8 JavaScript Engine: remnux/v8</a></li>
+                            
+                        
+                            <li class="toctree-l3"><a href="#thug-low-interaction-honeyclient-remnuxthug">Thug Low-Interaction Honeyclient: remnux/thug</a></li>
+                            
+                        
+                            <li class="toctree-l3"><a href="#viper-binary-analysis-framework-remnuxviper">Viper Binary Analysis Framework: remnux/viper</a></li>
+                            
+                        
+                            <li class="toctree-l3"><a href="#rekall-memory-forensic-framework-remnuxrekall">Rekall Memory Forensic Framework: remnux/rekall</a></li>
+                            
+                        
+                            <li class="toctree-l3"><a href="#jsdetox-javascript-analysis-tool-remnuxjsdetox">JSDetox JavaScript Analysis Tool: remnux/jsdetox</a></li>
+                            
+                        
+                            <li class="toctree-l3"><a href="#radare2-reverse-engineering-framework-remnuxradare2">Radare2 Reverse Engineering Framework: remnux/radare2</a></li>
+                            
+                        
+                            <li class="toctree-l3"><a href="#pescanner-static-malware-analysis-tool-remnuxpescanner">Pescanner Static Malware Analysis Tool: remnux/pescanner</a></li>
+                            
+                        
+                        </ul>
+                    
+                </li>
+            
+                <li class="toctree-l2 ">
+                    <a class="" href="../create-docker-images">Creating Docker Images for REMnux</a>
+                    
+                </li>
+            
+        
+
+    
+        
+            <span>Expand REMnux</span>
+            
+                <li class="toctree-l2 ">
+                    <a class="" href="../../expand/contribute">Contribute Your Expertise</a>
+                    
+                </li>
+            
+        
+
+    
+</ul>
+
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../..">REMnux Docs</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../..">Docs</a> &raquo;</li>
+    <li>Running REMnux-Provided Images</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <p>If you&#8217;d like to run the tools below without installing the full REMnux Linux distro, you can use the REMnux collection of <a href="../malware-analysis">Docker Images for Malware Analysis</a>. The following page explains which applications are available as images and how to run them, assuming you&#8217;ve installed Docker on your underlying host.</p>
+<p>Once you&#8217;ve installed the desired image, as outlined below, you can update it by using the <code>docker pull</code> command (e.g., <code>sudo docker pull remnux/radare2</code>). To update all locally-cached images, run:</p>
+<pre><code>sudo docker images |cut -d' ' -f1 | grep -v REPOSITORY | xargs -I %s sudo docker pull %s
+</code></pre>
+<h2 id="googles-v8-javascript-engine-remnuxv8">Google&#8217;s V8 JavaScript Engine: remnux/v8</h2>
+<p><a href="https://code.google.com/p/v8">Google&#8217;s V8 JavaScript Engine</a> can be useful for obfuscating JavaScript embedded in malicious browser pages and PDF files. The REMnux image of this application is available in the the Docker Hub Registry as <a href="https://registry.hub.docker.com/u/remnux/v8/">remnux/v8</a>.</p>
+<p><img alt="Running remnux/v8" src="../../containers/remnux-docker-v8.gif" /></p>
+<p>The easiest way to use V8 is to invoke it by first running <code>bash</code> or another shell within its container, and then running the <code>d8</code> command:</p>
+<pre><code>sudo docker run --rm -it remnux/v8 bash
+</code></pre>
+<p>However, since you&#8217;ll probably want to provide some files for V8 to examine and get some files back, you will probably want to invoke Docker with the <code>-v</code> parameter to specify a shared directory that the container and the underlying host will be able to access:</p>
+<pre><code>sudo docker run --rm -it -v ~/files:/home/nonroot/files remnux/v8 bash
+</code></pre>
+<p>In the example above, the ~/files directory will be shared between your host and the container. Before running the command above, make sure that ~/files exists and that its permissions are world-readable (i.e., <code>chmod a+xwr</code>).</p>
+<p>The remnux/v8 image includes a file that defines several objects, methods and properties that malicious JavaScript scripts running in a standalone interpreter will require. This file is located within the container in the ~/def.js location. You might need to modify it to address the needs of your sample.</p>
+<p>Once in the container, you might want to invoke the V8 application using a command like this:</p>
+<pre><code>d8 -f ~/def.js ~/files/file.js
+</code></pre>
+<h2 id="thug-low-interaction-honeyclient-remnuxthug">Thug Low-Interaction Honeyclient: remnux/thug</h2>
+<p><a href="https://github.com/buffer/thug">Thug</a> low-interaction honeyclient can assist with the analysis of suspicious websites. The REMnux image of this application is available in the the Docker Hub Registry as <a href="https://registry.hub.docker.com/u/remnux/thug/">remnux/thug</a>.</p>
+<p><img alt="Running remnux/thug" src="../../containers/remnux-docker-thug.gif" /></p>
+<p>The easiest way to use Thug is to invoke it by first running <code>bash</code> or another shell within its container, and then running the <code>./thug.py</code> command:</p>
+<pre><code>sudo docker run --rm -it remnux/thug bash
+</code></pre>
+<p>If you will want to save the log files that Thug creates when assessing the designated website, you will want to invoke Docker with the <code>-v</code> parameter to specify a shared directory that the container and the underlying host will be able to access:</p>
+<pre><code>sudo docker run --rm -it -v ~/logs:/home/thug/logs remnux/thug bash
+</code></pre>
+<p>In the example above, the ~/logs directory will be shared between your host and the container. Before running the command above, make sure that ~/logs exists and that its permissions are world-readable (i.e., <code>chmod a+xwr</code>). If you&#8217;d like to share an additional directory (e.g., &#8220;files&#8221;), supply the mapping using another -v parameter such as <code>-v ~/files:/home/thug/files</code> and remember to make the directory on your host world-accessible.</p>
+<p>Once in the container, you might want to invoke the Thug application using a command like this:</p>
+<pre><code>./thug.py http://example.com
+</code></pre>
+<p>If you want Thug to examine a single website and don&#8217;t need an interactive shell, you could run its image like this:</p>
+<pre><code>sudo docker run --rm -it -v ~/logs:/home/thug/logs remnux/thug ./thug.py http://example.com
+</code></pre>
+<p>In the example above, we launched the Thug image and specified that the command to run within it should be <code>./thug.py http://example.com</code>. We also directed Docker to share the underlying host&#8217;s ~/log directory, which is where Thug saved the results of its analysis.</p>
+<p><img alt="Non-Interactive Thug Session" src="../../containers/remnux-docker-thug2.png" /></p>
+<h2 id="viper-binary-analysis-framework-remnuxviper">Viper Binary Analysis Framework: remnux/viper</h2>
+<p><a href="http://viper.li/">Viper</a> is &#8220;a binary management and analysis framework dedicated to malware and exploit researchers.&#8221; It&#8217;s useful to examine samples and maintain historical records about prior investigations. The REMnux image of this application is available in the the Docker Hub Registry as <a href="https://registry.hub.docker.com/u/remnux/viper/">remnux/viper</a>.</p>
+<p><img alt="Running remnux/viper" src="../../containers/remnux-docker-viper.gif" /></p>
+<p>One way to launch Viper is to simply run its container:</p>
+<pre><code>sudo docker run --rm -it remnux/viper
+</code></pre>
+<p>This will automatically launch the tool. Alternatively, you could start the container by first running <code>bash</code> or another shell in it, and then running the <code>../viper/viper.py</code> command with the desired parameters:</p>
+<pre><code>sudo docker run --rm -it remnux/viper bash
+</code></pre>
+<p>However, you&#8217;ll probably want to share a directory between the container and your underlying host, so that Viper can read your samples and save its analysis. To do this, invoke Docker with the <code>-v</code> parameter to specify a shared directory that the container and the underlying host will be able to access:</p>
+<pre><code>sudo docker run --rm -it -v ~/viper-workdir:/home/nonroot/workdir remnux/viper
+</code></pre>
+<p>In the example above, the ~/viper-workdir directory will be shared between your host and the container. Before running the command above, make sure that ~/viper-workdir exists and that its permissions are world-readable (i.e., <code>chmod a+xwr</code>).</p>
+<h2 id="rekall-memory-forensic-framework-remnuxrekall">Rekall Memory Forensic Framework: remnux/rekall</h2>
+<p><a href="http://www.rekall-forensic.com/">Rekall</a> is a collection of tools for the extraction and analysis of artifacts from memory images. The REMnux image of this application is available in the the Docker Hub Registry as <a href="https://registry.hub.docker.com/u/remnux/rekall/">remnux/rekall</a>.</p>
+<p><img alt="Running remnux/rekall" src="../../containers/remnux-docker-rekall.gif" /></p>
+<p>One way to launch Rekall is to start the container by first running <code>bash</code> or another shell in it, and then running the <code>rekall</code> command with the desired parameters:</p>
+<pre><code>sudo docker run --rm -it remnux/rekall bash
+</code></pre>
+<p>However, you&#8217;ll probably want to share a directory between the container and your underlying host, so that Rekall can read your memory image files and save its output. To do this, invoke Docker with the <code>-v</code> parameter to specify a shared directory that the container and the underlying host will be able to access:</p>
+<pre><code>sudo docker run --rm -it -v ~/files:/home/nonroot/files remnux/rekall bash
+</code></pre>
+<p>In the example above, the ~/files directory will be shared between your host and the container. Before running the command above, make sure that ~/files exists and that its permissions are world-readable (i.e., <code>chmod a+xwr</code>).</p>
+<p>To use Rekall&#8217;s web console, instead of its command-line interface, invoke the container with the -p parameter to give your host access to the container&#8217;s TCP port 8000 like this:</p>
+<pre><code>sudo docker run --rm -it -p 8000:8000 -v ~/files:/home/nonroot/files remnux/rekall
+</code></pre>
+<p>Then connect to http://localhost:8000 using a web browser from your underlying host. To stop the container running in this mode, press <code>Ctrl+C</code> in its terminal window.</p>
+<h2 id="jsdetox-javascript-analysis-tool-remnuxjsdetox">JSDetox JavaScript Analysis Tool: remnux/jsdetox</h2>
+<p><a href="http://www.relentless-coding.com/projects/jsdetox">JSDetox</a> is a web-based tool for analyzing and deobfuscating JavaScript. The REMnux image of this application is available in the the Docker Hub Registry as <a href="https://registry.hub.docker.com/u/remnux/jsdetox/">remnux/jsdetox</a>.</p>
+<p><img alt="Running remnux/jsdetox" src="../../containers/remnux-docker-jsdetox.gif" /></p>
+<p>One way to launch JSDetox, run its container like this:</p>
+<pre><code>sudo docker run --rm -p 3000:3000 remnux/jsdetox
+</code></pre>
+<p>Then connect to http://localhost:3000 using a web browser from your underlying host.</p>
+<p>To stop the JSDetox container, run <code>sudo docker ps -l</code> on your host to obtain the container ID, then use the <code>sudo docker stop</code>container-id` command and wait about a minute, where &#8220;container-id&#8221; is the ID of the JSDetox container.</p>
+<p>Help expand this collection! You can put together Dockerfile configs for building Docker images of malware analysis applications that are not yet present in the repository. To do this, follow the guidelines in the article <a href="../create-docker-images">Creating Docker Images for REMnux</a>.</p>
+<h2 id="radare2-reverse-engineering-framework-remnuxradare2">Radare2 Reverse Engineering Framework: remnux/radare2</h2>
+<p><a href="http://radare.org/">Radare2</a> is a reverse-engineering framework that includes a disassembler and other capabilities useful for analyzing malicious code. The REMnux image of this application is available in the the Docker Hub Registry as <a href="https://registry.hub.docker.com/u/remnux/radare2/">remnux/radare2</a>.</p>
+<p><img alt="Running remnux/radare2" src="../../containers/remnux-docker-radare2.gif" /></p>
+<p>To use Radare2, first run <code>bash</code> or another shell in its container and then specify the <code>rd2</code> command with the desired parameters. You&#8217;ll probably want to share a directory between the container and your underlying host, so that Radare2 can read your samples and save its output. To do this, invoke Docker with the <code>-v</code> parameter to specify a shared directory that the container and the underlying host will be able to access:</p>
+<pre><code>sudo docker run --rm -it -v ~/workdir:/home/nonroot/workdir remnux/radare2 bash
+</code></pre>
+<p>In the example above, the ~/workdir directory will be shared between your host and the container. Before running the command above, make sure that ~/workdir exists and that its permissions are world-readable (i.e., <code>chmod a+xwr</code>).</p>
+<h2 id="pescanner-static-malware-analysis-tool-remnuxpescanner">Pescanner Static Malware Analysis Tool: remnux/pescanner</h2>
+<p><a href="https://code.google.com/p/malwarecookbook/source/browse/trunk/3/8/pescanner.py">Pescaner</a> is a static malware analysis tool for examining suspicious Windows PE files. It was created by created by <a href="http://www.mnin.org/">Michael Ligh</a> and distributed with the book <a href="http://www.malwarecookbook.com/">Malware Analyst Cookbook</a>. The REMnux collection uses the <a href="https://github.com/hiddenillusion/AnalyzePE/blob/master/pescanner.py">version of this tool</a> that was modified by <a href="https://www.linkedin.com/in/glennpedwardsjr">Glenn P. Edwards Jr.</a> to introduce <a href="https://www.mandiant.com/blog/tracking-malware-import-hashing/">imphash</a> support.</p>
+<p><img alt="Running remnux/pescanner" src="../../containers/remnux-docker-pescanner.gif" /></p>
+<p>To use pescanner, first run <code>bash</code> or another shell in its container and then specify the <code>pescanner</code> command, followed by the path to the file you&#8217;d like to examine. You&#8217;ll probably want to share a directory between the container and your underlying host, so that pescanner can access your samples. To do this, invoke Docker with the <code>-v</code> parameter to specify a shared directory that the container and the underlying host will be able to access:</p>
+<pre><code>sudo docker run --rm -it -v ~/workdir:/home/nonroot/workdir remnux/pescanner bash
+</code></pre>
+<p>In the example above, the ~/workdir directory will be shared between your host and the container. Before running the command above, make sure that ~/workdir exists and that its permissions are world-readable (i.e., <code>chmod a+xwr</code>).</p>
+
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../create-docker-images" class="btn btn-neutral float-right" title="Creating Docker Images for REMnux"/>Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../malware-analysis" class="btn btn-neutral" title="Docker Images for Malware Analysis"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+    <!-- Copyright etc -->
+    </p>
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+	  
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+<div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href="../malware-analysis" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../create-docker-images" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+</body>
+</html>
