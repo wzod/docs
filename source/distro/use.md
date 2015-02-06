@@ -1,4 +1,4 @@
-This section will contain documentation about the tools installed on the REMnux distro. Would you like to [contribute your insights on REMnux and its tools](../expand/contribute.md) to expand this document set?
+This section will contain documentation about the tools installed on the REMnux&trade; distro. Would you like to [contribute your insights on REMnux and its tools](../expand/contribute.md) to expand this document set?
 
 ## Recorded REMnux Webcasts
 

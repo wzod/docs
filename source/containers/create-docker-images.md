@@ -1,4 +1,4 @@
-Please contribute to the [REMnux collection of Docker images](https://registry.hub.docker.com/repos/remnux/) of malware analysis applications. You'll get a chance to experiment with Docker, become a master at setting up an application of your choice and expand the set of tools that other professionals can conveniently run for examining malicious software.
+Please contribute to the [REMnux&trade; collection of Docker images](https://registry.hub.docker.com/repos/remnux/) of malware analysis applications. You'll get a chance to experiment with Docker, become a master at setting up an application of your choice and expand the set of tools that other professionals can conveniently run for examining malicious software.
 
 As a starting point, read the REMnux page regarding [Docker and the notion of containers](malware-analysis.md). Also, familiarize yourself with the approaches to [running images that have already been created](run-apps.md) as part of the REMnux project. Next, review the guidelines and examples below. Lastly, read Docker's documentation for [building images using a Dockerfile](http://docs.docker.com/reference/builder/).
 

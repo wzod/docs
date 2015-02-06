@@ -1,6 +1,6 @@
 # Contribute Your Expertise
 
-REMnux is maintained by [Lenny Zeltser](http://zeltser.com) with extensive help from [David Westcott](https://twitter.com/beast_fighter). We could use your assistance! There are several ways in which you can also contribute to the project.
+REMnux&trade; is maintained by [Lenny Zeltser](http://zeltser.com) with extensive help from [David Westcott](https://twitter.com/beast_fighter). We could use your assistance! There are several ways in which you can also contribute to the project.
 
 ## Documentation
 

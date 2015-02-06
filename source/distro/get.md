@@ -1,4 +1,4 @@
-The heart of the [REMnux](https://REMnux.org/) project is the REMnux Linux distribution based on [Ubuntu](http://www.ubuntu.com/). This lightweight distro incorporates many tools for analyzing Windows and Linux malware, examining browser-based threats such as obfuscated JavaScript, exploring suspicious document files and taking apart other malicious artifacts. Investigators can also use the distro to intercept suspicious network traffic in an isolated lab when performing behavioral malware analysis.
+The heart of the [REMnux](https://REMnux.org/)&trade; project is the REMnux Linux distribution based on [Ubuntu](http://www.ubuntu.com/). This lightweight distro incorporates many tools for analyzing Windows and Linux malware, examining browser-based threats such as obfuscated JavaScript, exploring suspicious document files and taking apart other malicious artifacts. Investigators can also use the distro to intercept suspicious network traffic in an isolated lab when performing behavioral malware analysis.
 
 ## Download the REMnux Distro
 
