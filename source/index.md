@@ -1,4 +1,4 @@
-![REMnux Logo](REMnux-logo.png)
+<img width="250" height="250" src="/img/REMnux-logo.png" alt="REMnux Logo" /><p></p>
 
 # REMnux Documentation
 
