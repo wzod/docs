@@ -1,4 +1,4 @@
-<img width="250" height="250" src="/img/REMnux-logo.png" alt="REMnux Logo" /><p></p>
+<img width="250" height="250" src="REMnux-logo.png" alt="REMnux Logo" /><p></p>
 
 # REMnux Documentation
 
