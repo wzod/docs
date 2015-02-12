@@ -9,4 +9,4 @@ To get started with the REMnux distro and become familiar with some of its tools
 
 ## REMnux Cheat Sheet
 
-The one-page [REMnux cheat sheet](http://zeltser.com/remnux/remnux-malware-analysis-tips.html) provides a reasonable reference if you are new to REMnux. Also, the [Xmind-formatted mind map](http://zeltser.com/remnux/remnux-v5-tools.xmind) of the tools that comprise the distro include brief references for each tool and a tip for how to launch it.
+The one-page [REMnux cheat sheet](https://zeltser.com/remnux-malware-analysis-tips/) provides a reasonable reference if you are new to REMnux. Also, the [Xmind-formatted mind map](https://github.com/REMnux/distro/blob/v5/remnux-v5-tools.xmind?raw=true) of the tools that comprise the distro include brief references for each tool and a tip for how to launch it.

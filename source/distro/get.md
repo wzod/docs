@@ -10,7 +10,7 @@ You can [download the REMnux distribution](https://sourceforge.net/downloads/rem
 
 Prior to using the REMnux virtual appliance, you'll need to obtain virtualization software such as [VMware Player](http://www.vmware.com/products/player/), [VMware Workstation](http://www.vmware.com/products/workstation/), [VMware Fusion](http://www.vmware.com/products/fusion/overview.html) and [VirtualBox](https://www.virtualbox.org/).
 
-For detailed instructions specific to the OVF/OVA version, see the article [Installing the REMnux Virtual Appliance for Malware Analysis](http://digital-forensics.sans.org/blog/2013/04/10/installing-remnux-virtual-appliance). If using the OVF/OVA virtual appliance with VMware, you can optionally [install VMware Tools in REMnux](http://zeltser.com/reverse-malware/install-vmware-tools.html).
+For detailed instructions specific to the OVF/OVA version, see the article [Installing the REMnux Virtual Appliance for Malware Analysis](http://digital-forensics.sans.org/blog/2013/04/10/installing-remnux-virtual-appliance). If using the OVF/OVA virtual appliance with VMware, you can optionally [install VMware Tools in REMnux](https://zeltser.com/install-vmware-tools-on-remnux/).
 
 If you encounter problems installing REMnux, please see the tips, issues, errata and workarounds outlined in [REMnux Version 5 Installation Notes](https://github.com/REMnux/distro/blob/v5/remnux5-installation-notes.md).
 
@@ -18,9 +18,9 @@ If you encounter problems installing REMnux, please see the tips, issues, errata
 
 Version 6 of REMnux is in the works and will be available in early 2015. It will be based on 64-bit [Ubuntu 14.04 LTS](http://releases.ubuntu.com/14.04/).
 
-The latest release of the REMnux distro is version 5. It came out in May 2014. This release added new tools to the distribution and updated those that have been present the prior version. For more details related to REMnux v5, see [its release announcement](http://blog.zeltser.com/post/86508269224/remnux-v5-release-for-malware-analysts).
+The latest release of the REMnux distro is version 5. It came out in May 2014. This release added new tools to the distribution and updated those that have been present the prior version. For more details related to REMnux v5, see [its release announcement](https://zeltser.com/remnux-v5-release-for-malware-analysts/).
 
-Version 4 of the REMnux distro [came out in April 2013](http://blog.zeltser.com/post/47545363323/version-4-release-of-remnux-linux-distro-for). For details regarding REMnux v4, and to see the overview of the tools added to the distro as part of this release, [tune into the recorded webcast on this topic](https://www.youtube.com/watch?v=4LzCr9qf5_Q).
+Version 4 of the REMnux distro [came out in April 2013](https://zeltser.com/version-4-release-of-remnux-linux-distro-for-malware/). For details regarding REMnux v4, and to see the overview of the tools added to the distro as part of this release, [tune into the recorded webcast on this topic](https://www.youtube.com/watch?v=4LzCr9qf5_Q).
 
 ## Connecting REMnux to the Internet
 
