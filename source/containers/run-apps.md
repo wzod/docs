@@ -152,7 +152,7 @@ However, you'll probably want to share a directory between the container and you
     
 In the example above, the ~/memdumps directory will be shared between your host and the container. Before running the command above, make sure that ~/memdumps exists and that all users have the ability to read from and write to that directory and its contents (i.e., `chmod a+xwr`).
 
-## MASTIFF Static Analysis Framework
+## MASTIFF Static Analysis Framework: remnux/mastiff
 
 [MASTIFF](https://github.com/KoreLogicSecurity/mastiff) is a framework for automatically extracting key static properties from suspicious files.
 
