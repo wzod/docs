@@ -135,3 +135,31 @@ To use pescanner, first run `bash` or another shell in its container and then sp
     sudo docker run --rm -it -v ~/workdir:/home/nonroot/workdir remnux/pescanner bash
 
 In the example above, the ~/workdir directory will be shared between your host and the container. Before running the command above, make sure that ~/workdir exists and that its permissions are world-readable (i.e., `chmod a+xwr`).
+
+## The Volatility Framework for Memory Forensics: remnux/volatility
+
+ [The Volatility Framework](http://www.volatilityfoundation.org/#!releases/component_71401) for Memory Forensics is a set of libraries and modules for examining memory images for malware and forensic artifacts.
+
+![Running remnux/volatility](containers/remnux-docker-volatility.gif)
+
+To use Volatility, first run  `bash` or another shell in its container and then specify the `vol.py` command with the desired parameters:
+
+    sudo docker run --rm -it remnux/volatility bash
+
+However, you'll probably want to share a directory between the container and your underlying host, so that Volatility can read your memory image files and save its output. To do this, invoke Docker with the `-v` parameter to specify a shared directory that the container and the underlying host will be able to access:
+
+    sudo docker run --rm -it -v ~/memdumps:/home/nonroot/memdumps remnux/volatility bash
+    
+In the example above, the ~/memdumps directory will be shared between your host and the container. Before running the command above, make sure that ~/memdumps exists and that all users have the ability to read from and write to that directory and its contents (i.e., `chmod a+xwr`).
+
+## MASTIFF Static Analysis Framework
+
+[MASTIFF](https://github.com/KoreLogicSecurity/mastiff) is a framework for automatically extracting key static properties from suspicious files.
+
+![Running remnux/mastiff](containers/remnux-docker-mastiff.gif)
+
+To use MASTIFF, first run `bash` or another shell in its container and then specify the `mas.py` command with the appropriate parameters. You'll probably want to share a directory between the container and your underlying host, so that MASTIFF can access your samples and provide your with analysis logs. To do this, invoke Docker with the `-v` parameter to specify a shared directory that the container and the underlying host will be able to access:
+
+    sudo docker run --rm -it -v ~/mastiff-workdir:/home/nonroot/workdir remnux/mastiff
+
+In the example above, the ~/mastiff-workdir directory will be shared between your host and the container. Before running the command above, make sure that ~/mastiff-workdir exists and that its permissions are world-readable (i.e., `chmod a+xwr`).
