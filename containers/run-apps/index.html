@@ -114,6 +114,12 @@
                             <li class="toctree-l3"><a href="#pescanner-static-malware-analysis-tool-remnuxpescanner">Pescanner Static Malware Analysis Tool: remnux/pescanner</a></li>
                             
                         
+                            <li class="toctree-l3"><a href="#the-volatility-framework-for-memory-forensics-remnuxvolatility">The Volatility Framework for Memory Forensics: remnux/volatility</a></li>
+                            
+                        
+                            <li class="toctree-l3"><a href="#mastiff-static-analysis-framework">MASTIFF Static Analysis Framework</a></li>
+                            
+                        
                         </ul>
                     
                 </li>
@@ -253,6 +259,23 @@
 <pre><code>sudo docker run --rm -it -v ~/workdir:/home/nonroot/workdir remnux/pescanner bash
 </code></pre>
 <p>In the example above, the ~/workdir directory will be shared between your host and the container. Before running the command above, make sure that ~/workdir exists and that its permissions are world-readable (i.e., <code>chmod a+xwr</code>).</p>
+<h2 id="the-volatility-framework-for-memory-forensics-remnuxvolatility">The Volatility Framework for Memory Forensics: remnux/volatility</h2>
+<p><a href="http://www.volatilityfoundation.org/#!releases/component_71401">The Volatility Framework</a> for Memory Forensics is a set of libraries and modules for examining memory images for malware and forensic artifacts.</p>
+<p><img alt="Running remnux/volatility" src="../../containers/remnux-docker-volatility.gif" /></p>
+<p>To use Volatility, first run  <code>bash</code> or another shell in its container and then specify the <code>vol.py</code> command with the desired parameters:</p>
+<pre><code>sudo docker run --rm -it remnux/volatility bash
+</code></pre>
+<p>However, you&#8217;ll probably want to share a directory between the container and your underlying host, so that Volatility can read your memory image files and save its output. To do this, invoke Docker with the <code>-v</code> parameter to specify a shared directory that the container and the underlying host will be able to access:</p>
+<pre><code>sudo docker run --rm -it -v ~/memdumps:/home/nonroot/memdumps remnux/volatility bash
+</code></pre>
+<p>In the example above, the ~/memdumps directory will be shared between your host and the container. Before running the command above, make sure that ~/memdumps exists and that all users have the ability to read from and write to that directory and its contents (i.e., <code>chmod a+xwr</code>).</p>
+<h2 id="mastiff-static-analysis-framework">MASTIFF Static Analysis Framework</h2>
+<p><a href="https://github.com/KoreLogicSecurity/mastiff">MASTIFF</a> is a framework for automatically extracting key static properties from suspicious files.</p>
+<p><img alt="Running remnux/mastiff" src="../../containers/remnux-docker-mastiff.gif" /></p>
+<p>To use MASTIFF, first run <code>bash</code> or another shell in its container and then specify the <code>mas.py</code> command with the appropriate parameters. You&#8217;ll probably want to share a directory between the container and your underlying host, so that MASTIFF can access your samples and provide your with analysis logs. To do this, invoke Docker with the <code>-v</code> parameter to specify a shared directory that the container and the underlying host will be able to access:</p>
+<pre><code>sudo docker run --rm -it -v ~/mastiff-workdir:/home/nonroot/workdir remnux/mastiff
+</code></pre>
+<p>In the example above, the ~/mastiff-workdir directory will be shared between your host and the container. Before running the command above, make sure that ~/mastiff-workdir exists and that its permissions are world-readable (i.e., <code>chmod a+xwr</code>).</p>
 
               
             </div>
