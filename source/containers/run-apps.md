@@ -150,7 +150,7 @@ However, you'll probably want to share a directory between the container and you
 
     sudo docker run --rm -it -v ~/memdumps:/home/nonroot/memdumps remnux/volatility bash
     
-In the example above, the ~/memdumps directory will be shared between your host and the container. Before running the command above, make sure that ~/memdumps exists and that all users have the ability to read from and write to that directory and its contents (i.e., `chmod a+xwr`).
+In the example above, the ~/memdumps directory will be shared between your host and the container. Before running the above, make sure that ~/memdumps exists and that all users have the ability to read from and write to that directory and its contents (i.e., `chmod a+xwr`).
 
 ## MASTIFF Static Analysis Framework: remnux/mastiff
 
@@ -163,3 +163,26 @@ To use MASTIFF, first run `bash` or another shell in its container and then spec
     sudo docker run --rm -it -v ~/mastiff-workdir:/home/nonroot/workdir remnux/mastiff
 
 In the example above, the ~/mastiff-workdir directory will be shared between your host and the container. Before running the command above, make sure that ~/mastiff-workdir exists and that its permissions are world-readable (i.e., `chmod a+xwr`).
+
+## Maltrieve Malware Samples Downloader: remnux/maltrieve
+
+[Maltrieve](https://github.com/krmaxwell/maltrieve) is a tool for retrieving malware samples.
+
+To launch the Maltrieve image, run the following command, replacing
+"~/archive" with the path to your working directory on the underlying host.
+This is where the downloaded malware samples will be deposited.
+
+    sudo docker run --rm -it -v ~/archive:/archive remnux/maltrieve 
+
+This will launch Maltrieve without any parameters, directing the tool to retrieve
+malware samples and save them to the ~/archive directory.
+
+If you wish to specify command-line parameters to Maltrieve, then launch it like this:
+
+    sudo docker run --rm -it -v ~/archive:/archive remnux/maltrieve bash
+
+This will launch the bash shell in the container, at which point you can run the command
+"maltrieve", specifying optional command-line parameters if you wish.
+
+In the examples above, the ~/memdumps directory will be shared between your host and the container.  Before running the command, create ~/archive on your host and make it world-accessible
+(`chmod a+xwr`).
