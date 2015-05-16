@@ -168,6 +168,8 @@ In the example above, the ~/mastiff-workdir directory will be shared between you
 
 [Maltrieve](https://github.com/krmaxwell/maltrieve) is a tool for retrieving malware samples.
 
+![Running remnux/maltrieve](containers/remnux-docker-maltrieve.gif)
+
 To launch the Maltrieve image, run the following command, replacing
 "~/archive" with the path to your working directory on the underlying host.
 This is where the downloaded malware samples will be deposited.
