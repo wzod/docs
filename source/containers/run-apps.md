@@ -8,7 +8,7 @@ Once you've installed the desired image, as outlined below, you can update it by
 
 [Google's V8 JavaScript Engine](https://code.google.com/p/v8) can be useful for obfuscating JavaScript embedded in malicious browser pages and PDF files. The REMnux image of this application is available in the the Docker Hub Registry as [remnux/v8](https://registry.hub.docker.com/u/remnux/v8/).
 
-![Running remnux/v8](containers/remnux-docker-v8.gif)
+![Running remnux/v8](remnux-docker-v8.gif)
 
 The easiest way to use V8 is to invoke it by first running `bash` or another shell within its container, and then running the `d8` command:
 
@@ -30,7 +30,7 @@ Once in the container, you might want to invoke the V8 application using a comma
 
 [Thug](https://github.com/buffer/thug) low-interaction honeyclient can assist with the analysis of suspicious websites. The REMnux image of this application is available in the the Docker Hub Registry as [remnux/thug](https://registry.hub.docker.com/u/remnux/thug/).
 
-![Running remnux/thug](containers/remnux-docker-thug.gif)
+![Running remnux/thug](remnux-docker-thug.gif)
 
 The easiest way to use Thug is to invoke it by first running `bash` or another shell within its container, and then running the `./thug.py` command:
 
@@ -58,7 +58,7 @@ In the example above, we launched the Thug image and specified that the command 
 
 [Viper](http://viper.li/) is "a binary management and analysis framework dedicated to malware and exploit researchers." It's useful to examine samples and maintain historical records about prior investigations. The REMnux image of this application is available in the the Docker Hub Registry as [remnux/viper](https://registry.hub.docker.com/u/remnux/viper/).
 
-![Running remnux/viper](containers/remnux-docker-viper.gif)
+![Running remnux/viper](remnux-docker-viper.gif)
 
 One way to launch Viper is to simply run its container:
 
@@ -78,7 +78,7 @@ In the example above, the ~/viper-workdir directory will be shared between your 
 
 [Rekall](http://www.rekall-forensic.com/) is a collection of tools for the extraction and analysis of artifacts from memory images. The REMnux image of this application is available in the the Docker Hub Registry as [remnux/rekall](https://registry.hub.docker.com/u/remnux/rekall/).
 
-![Running remnux/rekall](containers/remnux-docker-rekall.gif)
+![Running remnux/rekall](remnux-docker-rekall.gif)
 
 One way to launch Rekall is to start the container by first running `bash` or another shell in it, and then running the `rekall` command with the desired parameters:
 
@@ -100,7 +100,7 @@ Then connect to http://localhost:8000 using a web browser from your underlying h
 
 [JSDetox](http://www.relentless-coding.com/projects/jsdetox) is a web-based tool for analyzing and deobfuscating JavaScript. The REMnux image of this application is available in the the Docker Hub Registry as [remnux/jsdetox](https://registry.hub.docker.com/u/remnux/jsdetox/).
 
-![Running remnux/jsdetox](containers/remnux-docker-jsdetox.gif)
+![Running remnux/jsdetox](remnux-docker-jsdetox.gif)
 
 One way to launch JSDetox, run its container like this:
 
@@ -116,7 +116,7 @@ Help expand this collection! You can put together Dockerfile configs for buildin
 
 [Radare2](http://radare.org/) is a reverse-engineering framework that includes a disassembler and other capabilities useful for analyzing malicious code. The REMnux image of this application is available in the the Docker Hub Registry as [remnux/radare2](https://registry.hub.docker.com/u/remnux/radare2/).
 
-![Running remnux/radare2](containers/remnux-docker-radare2.gif)
+![Running remnux/radare2](remnux-docker-radare2.gif)
 
 To use Radare2, first run `bash` or another shell in its container and then specify the `rd2` command with the desired parameters. You'll probably want to share a directory between the container and your underlying host, so that Radare2 can read your samples and save its output. To do this, invoke Docker with the `-v` parameter to specify a shared directory that the container and the underlying host will be able to access:
 
@@ -128,7 +128,7 @@ In the example above, the ~/workdir directory will be shared between your host a
 
 [Pescaner](https://code.google.com/p/malwarecookbook/source/browse/trunk/3/8/pescanner.py) is a static malware analysis tool for examining suspicious Windows PE files. It was created by created by [Michael Ligh](http://www.mnin.org/) and distributed with the book [Malware Analyst Cookbook](http://www.malwarecookbook.com/). The REMnux collection uses the [version of this tool](https://github.com/hiddenillusion/AnalyzePE/blob/master/pescanner.py) that was modified by [Glenn P. Edwards Jr.](https://www.linkedin.com/in/glennpedwardsjr) to introduce [imphash](https://www.mandiant.com/blog/tracking-malware-import-hashing/) support.
 
-![Running remnux/pescanner](containers/remnux-docker-pescanner.gif)
+![Running remnux/pescanner](remnux-docker-pescanner.gif)
 
 To use pescanner, first run `bash` or another shell in its container and then specify the `pescanner` command, followed by the path to the file you'd like to examine. You'll probably want to share a directory between the container and your underlying host, so that pescanner can access your samples. To do this, invoke Docker with the `-v` parameter to specify a shared directory that the container and the underlying host will be able to access:
 
@@ -140,7 +140,7 @@ In the example above, the ~/workdir directory will be shared between your host a
 
  [The Volatility Framework](http://www.volatilityfoundation.org/#!releases/component_71401) for Memory Forensics is a set of libraries and modules for examining memory images for malware and forensic artifacts.
 
-![Running remnux/volatility](containers/remnux-docker-volatility.gif)
+![Running remnux/volatility](remnux-docker-volatility.gif)
 
 To use Volatility, first run  `bash` or another shell in its container and then specify the `vol.py` command with the desired parameters:
 
@@ -156,7 +156,7 @@ In the example above, the ~/memdumps directory will be shared between your host 
 
 [MASTIFF](https://github.com/KoreLogicSecurity/mastiff) is a framework for automatically extracting key static properties from suspicious files.
 
-![Running remnux/mastiff](containers/remnux-docker-mastiff.gif)
+![Running remnux/mastiff](remnux-docker-mastiff.gif)
 
 To use MASTIFF, first run `bash` or another shell in its container and then specify the `mas.py` command with the appropriate parameters. You'll probably want to share a directory between the container and your underlying host, so that MASTIFF can access your samples and provide your with analysis logs. To do this, invoke Docker with the `-v` parameter to specify a shared directory that the container and the underlying host will be able to access:
 
@@ -168,7 +168,7 @@ In the example above, the ~/mastiff-workdir directory will be shared between you
 
 [Maltrieve](https://github.com/krmaxwell/maltrieve) is a tool for retrieving malware samples.
 
-![Running remnux/maltrieve](containers/remnux-docker-maltrieve.gif)
+![Running remnux/maltrieve](remnux-docker-maltrieve.gif)
 
 To launch the Maltrieve image, run the following command, replacing
 "~/archive" with the path to your working directory on the underlying host.

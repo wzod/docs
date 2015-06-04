@@ -3,24 +3,26 @@ site_url: https://remnux.org/docs
 site_description: Documentation for REMnux, a free toolkit for assisting malware analysts with reverse-engineering malicious software.
 site_favicon: favicon.ico
 theme: readthedocs
-markdown_extensions: [smartypants]
 copyright: Copyright &copy; 2014-2015, Lenny Zeltser
 docs_dir: source
-include_search: false
+strict: true
+
+markdown_extensions:
+  - smarty
 
 pages:
 
-- ['index.md', 'Home']
+  - Docs Home: 'index.md'
 
-# Distro
-- ['distro/get.md', 'REMnux Distro', 'Get the REMnux Distro']
-- ['distro/tools.md', 'REMnux Distro', 'Tools Installed on REMnux']
-- ['distro/use.md', 'REMnux Distro', 'Using REMnux and Its Tools']
+  - REMnux Distro:
+    - 'Get the REMnux Distro': 'distro/get.md'
+    - 'Tools Installed on REMnux': 'distro/tools.md'
+    - 'Using REMnux and Its Tools': 'distro/use.md'
 
-# Containers
-- ['containers/malware-analysis.md', 'Application Containers', 'Docker Images for Malware Analysis']
-- ['containers/run-apps.md', 'Application Containers', 'Running REMnux-Provided Images']
-- ['containers/create-docker-images.md', 'Application Containers', 'Creating Docker Images for REMnux']
+  - Application Containers: 
+    - 'Docker Images for Malware Analysis': 'containers/malware-analysis.md'
+    - 'Running REMnux-Provided Images': 'containers/run-apps.md'
+    - 'Creating Docker Images for REMnux': 'containers/create-docker-images.md'
 
-# Contribute
-- ['expand/contribute.md', 'Expand REMnux', 'Contribute Your Expertise']
+  - Expand REMnux:
+    - 'Contribute Your Expertise': 'expand/contribute.md'
