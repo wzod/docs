@@ -16,7 +16,7 @@ If you encounter problems installing REMnux, please see the tips, issues, errata
 
 ## REMnux Distro Releases
 
-Version 6 of REMnux is in the works and will be available in early 2015. It will be based on 64-bit [Ubuntu 14.04 LTS](http://releases.ubuntu.com/14.04/).
+Version 6 of REMnux is in the works and will be available in June 2015. It will be based on 64-bit [Ubuntu 14.04 LTS](http://releases.ubuntu.com/14.04/).
 
 The latest release of the REMnux distro is version 5. It came out in May 2014. This release added new tools to the distribution and updated those that have been present the prior version. For more details related to REMnux v5, see [its release announcement](https://zeltser.com/remnux-v5-release-for-malware-analysts/).
 
