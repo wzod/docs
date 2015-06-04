@@ -5,12 +5,10 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  
-  <link rel="canonical" href="https://remnux.org/docs/distro/tools/">
-  <link rel="shortcut icon" href="../../favicon.ico">
-  
-  
   <title>Tools Installed on REMnux - REMnux Docs</title>
+  
+
+  <link rel="shortcut icon" href="../../favicon.ico">
   
 
   
@@ -20,19 +18,18 @@
   <link rel="stylesheet" href="../../css/theme_extra.css" type="text/css" />
   <link rel="stylesheet" href="../../css/highlight.css">
 
-  <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-  <script src="//cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "distro/tools"
+  </script>
+  
+  <script src="../../js/jquery-2.1.1.min.js"></script>
+  <script src="../../js/modernizr-2.8.3.min.js"></script>
   <script type="text/javascript" src="../../js/highlight.pack.js"></script>
-  <script src="../../js/tipuesearch/tipuesearch_content.js"></script>
-  <script src="../../js/tipuesearch/tipuesearch.js"></script>
-  <script src="../../js/tipuesearch/tipuesearch_set.js"></script>
-  <script src="../../js/theme.js"></script>
+  <script src="../../js/theme.js"></script> 
 
-  <style>
-    body {font-size: 90%;}
-    pre, code {font-size: 100%;}
-    h3, h4, h5, h6 {color: #2980b9; font-weight: 300}
-  </style> 
+  
 </head>
 
 <body class="wy-body-for-nav" role="document">
@@ -43,117 +40,137 @@
     <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
       <div class="wy-side-nav-search">
         <a href="../.." class="icon icon-home"> REMnux Docs</a>
-        <!--
-
-<div role="search">
+        <div role="search">
   <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
     <input type="text" name="q" placeholder="Search docs" />
-    <input type="hidden" name="check_keywords" value="yes" />
-    <input type="hidden" name="area" value="default" />
   </form>
 </div>
-
--->
       </div>
 
       <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
-      <ul class="current">
-    
+        <ul class="current">
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../..">Docs Home</a>
         
-            <span>REMnux Distro</span>
-            
-                <li class="toctree-l2 ">
-                    <a class="" href="../get">Get the REMnux Distro</a>
-                    
-                </li>
-            
-                <li class="toctree-l2 current">
-                    <a class="current" href=".">Tools Installed on REMnux</a>
-                    
-                        <ul>
-                        
-                            <li class="toctree-l3"><a href="#examine-browser-malware">Examine Browser Malware</a></li>
-                            
-                        
-                            <li class="toctree-l3"><a href="#examine-document-files">Examine Document Files</a></li>
-                            
-                        
-                            <li class="toctree-l3"><a href="#extract-and-decode-artifacts">Extract and Decode Artifacts</a></li>
-                            
-                        
-                            <li class="toctree-l3"><a href="#handle-network-interactions">Handle Network Interactions</a></li>
-                            
-                        
-                            <li class="toctree-l3"><a href="#process-multiple-samples">Process Multiple Samples</a></li>
-                            
-                        
-                            <li class="toctree-l3"><a href="#examine-file-properties-and-contents">Examine File Properties and Contents</a></li>
-                            
-                        
-                            <li class="toctree-l3"><a href="#investigate-linux-malware">Investigate Linux Malware</a></li>
-                            
-                        
-                            <li class="toctree-l3"><a href="#edit-and-view-files">Edit and View Files</a></li>
-                            
-                        
-                            <li class="toctree-l3"><a href="#examine-memory-snapshots">Examine Memory Snapshots</a></li>
-                            
-                        
-                            <li class="toctree-l3"><a href="#statically-examine-pe-files">Statically Examine PE Files</a></li>
-                            
-                        
-                            <li class="toctree-l3"><a href="#perform-other-tasks">Perform Other Tasks</a></li>
-                            
-                        
-                            <li class="toctree-l3"><a href="#install-additional-tools">Install Additional Tools</a></li>
-                            
-                        
-                        </ul>
-                    
-                </li>
-            
-                <li class="toctree-l2 ">
-                    <a class="" href="../use">Using REMnux and Its Tools</a>
-                    
-                </li>
-            
-        
+    </li>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>REMnux Distro</span></li>
 
-    
         
-            <span>Application Containers</span>
             
-                <li class="toctree-l2 ">
-                    <a class="" href="../../containers/malware-analysis">Docker Images for Malware Analysis</a>
-                    
-                </li>
-            
-                <li class="toctree-l2 ">
-                    <a class="" href="../../containers/run-apps">Running REMnux-Provided Images</a>
-                    
-                </li>
-            
-                <li class="toctree-l2 ">
-                    <a class="" href="../../containers/create-docker-images">Creating Docker Images for REMnux</a>
-                    
-                </li>
-            
+    <li class="toctree-l1 ">
+        <a class="" href="../get/">Get the REMnux Distro</a>
         
+    </li>
 
-    
         
-            <span>Expand REMnux</span>
             
-                <li class="toctree-l2 ">
-                    <a class="" href="../../expand/contribute">Contribute Your Expertise</a>
-                    
-                </li>
-            
+    <li class="toctree-l1 current">
+        <a class="current" href="./">Tools Installed on REMnux</a>
         
+            <ul>
+            
+                <li class="toctree-l3"><a href="#examine-browser-malware">Examine Browser Malware</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#examine-document-files">Examine Document Files</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#extract-and-decode-artifacts">Extract and Decode Artifacts</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#handle-network-interactions">Handle Network Interactions</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#process-multiple-samples">Process Multiple Samples</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#examine-file-properties-and-contents">Examine File Properties and Contents</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#investigate-linux-malware">Investigate Linux Malware</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#edit-and-view-files">Edit and View Files</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#examine-memory-snapshots">Examine Memory Snapshots</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#statically-examine-pe-files">Statically Examine PE Files</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#perform-other-tasks">Perform Other Tasks</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#install-additional-tools">Install Additional Tools</a></li>
+                
+            
+            </ul>
+        
+    </li>
 
-    
-</ul>
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../use/">Using REMnux and Its Tools</a>
+        
+    </li>
 
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Application Containers</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../containers/malware-analysis/">Docker Images for Malware Analysis</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../containers/run-apps/">Running REMnux-Provided Images</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../containers/create-docker-images/">Creating Docker Images for REMnux</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Expand REMnux</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../expand/contribute/">Contribute Your Expertise</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+        </ul>
       </div>
       &nbsp;
     </nav>
@@ -172,6 +189,13 @@
           <div role="navigation" aria-label="breadcrumbs navigation">
   <ul class="wy-breadcrumbs">
     <li><a href="../..">Docs</a> &raquo;</li>
+    
+      
+        
+          <li>REMnux Distro &raquo;</li>
+        
+      
+    
     <li>Tools Installed on REMnux</li>
     <li class="wy-breadcrumbs-aside">
       
@@ -183,7 +207,7 @@
             <div class="section">
               
                 <p>The REMnux&trade; distribution includes many free tools useful for examining malicious software. These utilities are set up and tested to make it easier for you to perform malware analysis tasks without needing to figure out how to install them. The majority of these tools are listed below.</p>
-<p>For more details, including each tool&#8217;s description, see the REMnux v5 Tools <a href="https://github.com/REMnux/remnux/blob/v5/remnux-v5-tools.xmind?raw=true">mind map in the Xmind format</a> or as a <a href="https://github.com/REMnux/remnux/blob/v5/remnux-v5-tools.xlsx?raw=true">spreadsheet</a>. <a href="https://github.com/REMnux/remnux/blob/v5/remnux-v5-tools.pdf?raw=true">PDF of the mind map</a> is also available.</p>
+<p>For more details, including each tool&rsquo;s description, see the REMnux v5 Tools <a href="https://github.com/REMnux/remnux/blob/v5/remnux-v5-tools.xmind?raw=true">mind map in the Xmind format</a> or as a <a href="https://github.com/REMnux/remnux/blob/v5/remnux-v5-tools.xlsx?raw=true">spreadsheet</a>. <a href="https://github.com/REMnux/remnux/blob/v5/remnux-v5-tools.pdf?raw=true">PDF of the mind map</a> is also available.</p>
 <h2 id="examine-browser-malware">Examine Browser Malware</h2>
 <ul>
 <li>Website analysis: <a href="https://github.com/buffer/thug">Thug</a>, <a href="http://mitmproxy.org/">mitmproxy</a>, <a href="http://www.netresec.com/?page=NetworkMiner">Network Miner Free Edition</a>, <a href="http://curl.haxx.se/">curl</a>, <a href="https://www.gnu.org/software/wget/">Wget</a>, <a href="http://www.mozilla.org/firefox">Firefox</a>, <a href="http://portswigger.net/burp/">Burp Proxy Free Edition</a>, <a href="http://www.tekdefense.com/automater/">Automater</a>, pdnstool, <a href="http://malzilla.sourceforge.net/">Malzilla</a>, <a href="https://www.torproject.org/">Tor</a></li>
@@ -223,7 +247,7 @@
 <ul>
 <li>System: <a href="http://www.sysdig.org/">Sysdig</a>, <a href="http://www.unhide-forensics.info/">Unhide</a></li>
 <li>Disassemble: <a href="http://visi.kenshoto.com/viki/Vivisect">Vivisect</a>, <a href="http://udis86.sourceforge.net/">Udis86</a>, <a href="http://en.wikipedia.org/wiki/Objdump">objdump</a></li>
-<li>Debug: <a href="http://codef00.com/projects#debugger">Evan&#8217;s Debugger (EDB)</a>, <a href="http://www.sourceware.org/gdb/">GNU Project Debugger (GDB)</a></li>
+<li>Debug: <a href="http://codef00.com/projects#debugger">Evan&rsquo;s Debugger (EDB)</a>, <a href="http://www.sourceware.org/gdb/">GNU Project Debugger (GDB)</a></li>
 <li>Trace: <a href="https://sourceforge.net/projects/strace/">strace</a>, <a href="http://ltrace.org/">ltrace</a></li>
 <li>Investigate: <a href="https://github.com/radare/radare2">Radare 2</a>, <a href="https://code.google.com/p/pyew/">Pyew</a>, <a href="https://inguma.eu/projects/bokken">Bokken</a></li>
 </ul>
@@ -252,14 +276,13 @@
 <h2 id="install-additional-tools">Install Additional Tools</h2>
 <p><a href="https://github.com/rapid7/metasploit-framework">Metasploit</a> is not installed on REMnux; however, <a href="https://zeltser.com/install-metasploit-on-remnux/">you can install it yourself</a> if the need arises.</p>
 <p><a href="https://github.com/TheDr1ver/WIPSTER">WIPSTER</a> offers a web-based interface to several REMnux tools. You can easily install WIPSTER on REMnux by running the command <code>/usr/local/sbin/install-wipster</code>.</p>
-<p><a name="vtTool"></a><a href="https://code.google.com/p/malware-crawler/wiki/vtTool">vtTool</a> offers a convenient way of determining the likely name of malware by querying VirusTotal using the file&#8217;s hash via the command line. To install it on REMnux after connecting the REMnux system to the Internet, run the following commands:</p>
+<p><a name="vtTool"></a><a href="https://code.google.com/p/malware-crawler/wiki/vtTool">vtTool</a> offers a convenient way of determining the likely name of malware by querying VirusTotal using the file&rsquo;s hash via the command line. To install it on REMnux after connecting the REMnux system to the Internet, run the following commands:</p>
 <pre><code>sudo apt-get -y install python-numpy python-scipy python-levenshtein
 sudo pip install fuzzywuzzy scikit-learn
 wget https://malware-crawler.googlecode.com/svn/MalwareCrawler/src/tools/vtTool.py
 chmod a+xr vtTool.py
 sudo mv vtTool.py /usr/local/bin
 </code></pre>
-
               
             </div>
           </div>
@@ -267,10 +290,10 @@ sudo mv vtTool.py /usr/local/bin
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../use" class="btn btn-neutral float-right" title="Using REMnux and Its Tools"/>Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="../use/" class="btn btn-neutral float-right" title="Using REMnux and Its Tools"/>Next <span class="icon icon-circle-arrow-right"></span></a>
       
       
-        <a href="../get" class="btn btn-neutral" title="Get the REMnux Distro"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../get/" class="btn btn-neutral" title="Get the REMnux Distro"><span class="icon icon-circle-arrow-left"></span> Previous</a>
       
     </div>
   
@@ -297,12 +320,13 @@ sudo mv vtTool.py /usr/local/bin
     <span class="rst-current-version" data-toggle="rst-current-version">
       
       
-        <span><a href="../get" style="color: #fcfcfc;">&laquo; Previous</a></span>
+        <span><a href="../get/" style="color: #fcfcfc;">&laquo; Previous</a></span>
       
       
-        <span style="margin-left: 15px"><a href="../use" style="color: #fcfcfc">Next &raquo;</a></span>
+        <span style="margin-left: 15px"><a href="../use/" style="color: #fcfcfc">Next &raquo;</a></span>
       
     </span>
 </div>
+
 </body>
 </html>
