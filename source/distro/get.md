@@ -2,9 +2,9 @@ The heart of the [REMnux](https://REMnux.org/)&trade; project is the REMnux Linu
 
 ## Download the REMnux Virtual Appliance
 
-The simplest way to get the REMnux distro is to [download its virtual appliance OVA file]. (http://sourceforge.net/projects/remnux/files/version6/remnux-6.0-ova-public.ova/download).
+The simplest way to get the REMnux distro is to [download its virtual appliance OVA file] (http://sourceforge.net/projects/remnux/files/version6/remnux-6.0-ova-public.ova/download). The SHA-256 hash of the file is (TBD).
 
-Prior to using the REMnux virtual appliance, you'll need to obtain virtualization software such as [VMware Player](http://www.vmware.com/products/player/), [VMware Workstation](http://www.vmware.com/products/workstation/), [VMware Fusion](http://www.vmware.com/products/fusion/) and [VirtualBox](https://www.virtualbox.org/).
+You'll need to install virtualization software such as [VMware Player](http://www.vmware.com/products/player/), [VMware Workstation](http://www.vmware.com/products/workstation/), [VMware Fusion](http://www.vmware.com/products/fusion/) and [VirtualBox](https://www.virtualbox.org/) prior to using the REMnux virtual appliance.
 
 Once you've downloaded the REMnux OVA file, import it into your virtualization software, then start the virtual machine. It will automatically log you into the environment using the user named "remnux". The user's password is "malware"; you might need to specify it when performing privileged operations.
 
