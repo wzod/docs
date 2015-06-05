@@ -6,7 +6,7 @@ The simplest way to get the REMnux distro is to [download its virtual appliance 
 
 Prior to using the REMnux virtual appliance, you'll need to obtain virtualization software such as [VMware Player](http://www.vmware.com/products/player/), [VMware Workstation](http://www.vmware.com/products/workstation/), [VMware Fusion](http://www.vmware.com/products/fusion/) and [VirtualBox](https://www.virtualbox.org/).
 
-Once you've downloaded the REMnux OVA file, import it into your virtualization softwre then start the virtual machine. It will automatically log you into the environment using the user named "remnux". The user's password is "malware"; you might need to specify it when performing privileged operations.
+Once you've downloaded the REMnux OVA file, import it into your virtualization software, then start the virtual machine. It will automatically log you into the environment using the user named "remnux". The user's password is "malware"; you might need to specify it when performing privileged operations.
 
 After booting into the virtual appliance, run the `update-remnux full` command on REMnux to update its software. This will allow you to benefit from any enhancements introduced after the virtual appliance has been packaged. Your system needs to have Internet access for this to work.
 
