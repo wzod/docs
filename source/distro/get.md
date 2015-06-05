@@ -14,9 +14,9 @@ After booting into the virtual appliance, run the `update-remnux full` command o
 
 Another way to get REMnux is to run its installation script on an existing system running Ubuntu 14.04 64-bit. This allows you to install REMnux on a physical host or a virtual machine. You can use this method to add REMnux software and settings to a host you've been using for a while or to a brand new system. [SIFT Workstation ](http://digital-forensics.sans.org/community/downloads) users can utilize this approach to combine SIFT and REMnux into a single system.
 
-If you'd like to build A REMnux system from scratch, use the [Ubuntu 14.04 64-bit minimal ISO](http://archive.ubuntu.com/ubuntu/dists/trusty/main/installer-amd64/current/images/netboot/mini.iso) as the starting point. When going through the Ubuntu installer, consider creating the user named "remnux" with the password "malware", though any credentials will work. If building a virtual machine, allocate at least 1GB of RAM and 25GB disk (more recommended).
+If you'd like to build A REMnux system from scratch, use the [Ubuntu 14.04 64-bit minimal ISO](http://archive.ubuntu.com/ubuntu/dists/trusty/main/installer-amd64/current/images/netboot/mini.iso) as the starting point. If building a virtual machine, allocate at least 1GB of RAM and 25GB disk (more recommended). When going through the Ubuntu installer, consider creating the user named "remnux" with the password "malware", though any credentials will work. For step-by-step instructions, see the [screenshots of the Ubuntu installation steps](https://plus.google.com/photos/115789786748067394249/albums/6156978999037787521?authkey=CP2Zs4P-tZWcmQE).
 
-Once you've loged into the newly-built or existing system compatible with REMnux, run this command to install the REMnux distro:
+Once you've logged into the newly-built or existing system compatible with REMnux, run the following command to install the REMnux distro:
 
     wget --quiet -O - https://remnux.org/get-remnux.sh | sudo bash
 
