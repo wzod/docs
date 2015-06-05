@@ -1,6 +1,6 @@
 The REMnux&trade; distribution includes many free tools useful for examining malicious software. These utilities are set up and tested to make it easier for you to perform malware analysis tasks without needing to figure out how to install them. The majority of these tools are listed below.
 
-For more details, including each tool's description, see the REMnux v5 Tools [mind map in the Xmind format](https://github.com/REMnux/remnux/blob/v5/remnux-v5-tools.xmind?raw=true) or as a [spreadsheet](https://github.com/REMnux/remnux/blob/v5/remnux-v5-tools.xlsx?raw=true). [PDF of the mind map](https://github.com/REMnux/remnux/blob/v5/remnux-v5-tools.pdf?raw=true) is also available.
+For more details, including each tool's description and source, see the XLSX [spreadsheet](https://REMnux.org/remnux-tools-sheet.xlsx) or the XMind-formatted [mind map](https://REMnux.org/remnux-tools-map.xmind). You can also get an overview of the key tools and commands on the [REMnux cheat sheet](https://zeltser.com/remnux-malware-analysis-tips/).
 
 ## Examine Browser Malware
 
