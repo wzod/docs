@@ -28,6 +28,20 @@ The REMnux virtual appliance is initially configured to use the "NAT" mode, so i
 
 Some of the REMnux tools are designed to run in an [isolated laboratory environment](https://zeltser.com/vmware-network-isolation-for-malware-analysis/), so you can perform behavioral analysis of malicious software running in the lab. In this case, configure REMnux use a virtual network without Internet connectivity. Other tools are designed to allow you to explore suspicious websites and interact with online resources; REMnux will need to be connected to an Internet-accessible network when performing these tasks.
 
+## Installing Virtualization Tools on REMnux
+
+When running REMnux on a VMware platform, it's usually a good idea to install VMware Tools within the virtual machine. This will allow the REMnux screen resolution to automatically adust to match your monitor's geometry. It will also provide some additional enhancements, such as the opportunity to share clipboard contents across your underlying host and the virtual machine.
+
+When running REMnux on VMware Workstation, Player or ESX, the simplest way to install VMware Tools using the open VM tools package by running the following command on REMnux, assuming it's connected to the Internet:
+
+    sudo apt-get install open-vm-tools-desktop
+    
+On VMware Fusion, the best approach is to install proprietary VMware Tools. To do this, activate the VMware Tools installation via Virtual Machine > Install VMware Tools, then run the command `install-vmware-tools` on REMnux. You can install VMware Tools this way on VMware Workstation and Player as well. For additional details, see the [VMware article on this topic](http://kb.vmware.com/kb/1022525).
+
+Please note that if you wish to use the shared folders feature of VMware, you will need to install proprietary VMware Tools with several adjustments to compensate for a compatibility issue between VMware Tools and the Ubuntu-supplied Linux kernel. These steps are described in an [article devoted to this topic](http://askubuntu.com/questions/586221/vmhgfs-module-not-compilable-for-vmware-tools-9-9-0-fusion7-1-after-ubuntu-lin). A more practical option for transferring files in and out of REMnux might be to use SFTP through the installed SSH server (`sshd start`) instead of using shared folders.
+
+If using VirtualBox, consider installing Guest Additions software by following the [instructions provided by VirtualBox](https://www.virtualbox.org/manual/ch04.html).
+
 ## Updating Your REMnux System
 
 To update REMnux after connecting your system to the Internet, simply run the `update-remnux` command. This tool will update the software that comprises the REMnux distribution, which includes the applications installed from standard Ubuntu and the REMnux-specific repository. The updater will also installed any tools added to the distro after your last update.
