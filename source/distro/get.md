@@ -1,27 +1,33 @@
 The heart of the [REMnux](https://REMnux.org/)&trade; project is the REMnux Linux distribution based on [Ubuntu](http://www.ubuntu.com/). This lightweight distro incorporates many tools for analyzing Windows and Linux malware, examining browser-based threats such as obfuscated JavaScript, exploring suspicious document files and taking apart other malicious artifacts. Investigators can also use the distro to intercept suspicious network traffic in an isolated lab when performing behavioral malware analysis.
 
-## Download the REMnux Distro
+## Download the REMnux Virtual Appliance
 
-You can [download the REMnux distribution](https://sourceforge.net/downloads/remnux/version5/) as a virtual appliance archive and as an ISO image of a Live CD:
+The simplest way to get the REMnux distro is to [download its virtual appliance OVA file]. (http://sourceforge.net/projects/remnux/files/version6/remnux-6.0-ova-public.ova/download).
 
-- OVF/OVA virtual appliance: [remnux-5.0-ovf-public.ova](http://sourceforge.net/projects/remnux/files/version5/remnux-5.0-ova-public.ova/download) for most virtualization tools, including VMware and VirtualBox (MD5 hash e5ab6981d1a4d5956b05ed525130d41f)
-- VMware virtual appliance: [remnux-5.0-vm-public.zip](http://sourceforge.net/projects/remnux/files/version5/remnux-5.0-vm-public.zip/download) only for VMware virtualization softare and includes VMware Tools (MD5 hash 77ec0701661caceaa1a5eef90c0bacd1).
-- ISO image of a Live CD: [remnux-5.0-live-cd.iso](http://sourceforge.net/projects/remnux/files/version5/remnux-5.0-live-cd.iso/download) for ephemeral malware analysis sessions (MD5 hash a06b2603a13fba97f50818c2ab12bbe6).
+Prior to using the REMnux virtual appliance, you'll need to obtain virtualization software such as [VMware Player](http://www.vmware.com/products/player/), [VMware Workstation](http://www.vmware.com/products/workstation/), [VMware Fusion](http://www.vmware.com/products/fusion/) and [VirtualBox](https://www.virtualbox.org/).
 
-Prior to using the REMnux virtual appliance, you'll need to obtain virtualization software such as [VMware Player](http://www.vmware.com/products/player/), [VMware Workstation](http://www.vmware.com/products/workstation/), [VMware Fusion](http://www.vmware.com/products/fusion/overview.html) and [VirtualBox](https://www.virtualbox.org/).
+Once you've downloaded the REMnux OVA file, import it into your virtualization softwre then start the virtual machine. It will automatically log you into the environment using the user named "remnux". The user's password is "malware"; you might need to specify it when performing privileged operations.
 
-For detailed instructions specific to the OVF/OVA version, see the article [Installing the REMnux Virtual Appliance for Malware Analysis](http://digital-forensics.sans.org/blog/2013/04/10/installing-remnux-virtual-appliance). If using the OVF/OVA virtual appliance with VMware, you can optionally [install VMware Tools in REMnux](https://zeltser.com/install-vmware-tools-on-remnux/).
+After booting into the virtual appliance, run the `update-remnux full` command on REMnux to update its software. This will allow you to benefit from any enhancements introduced after the virtual appliance has been packaged. Your system needs to have Internet access for this to work.
 
-If you encounter problems installing REMnux, please see the tips, issues, errata and workarounds outlined in [REMnux Version 5 Installation Notes](https://github.com/REMnux/distro/blob/v5/remnux5-installation-notes.md).
+## Install REMnux on an Existing System
 
-## REMnux Distro Releases
+Another way to get REMnux is to run its installation script on an existing system running Ubuntu 14.04 64-bit. This allows you to install REMnux on a physical host or a virtual machine. You can use this method to add REMnux software and settings to a host you've been using for a while or to a brand new system. [SIFT Workstation ](http://digital-forensics.sans.org/community/downloads) users can utilize this approach to combine SIFT and REMnux into a single system.
 
-Version 6 of REMnux is in the works and will be available in June 2015. It will be based on 64-bit [Ubuntu 14.04 LTS](http://releases.ubuntu.com/14.04/).
+If you'd like to build A REMnux system from scratch, use the [Ubuntu 14.04 64-bit minimal ISO](http://archive.ubuntu.com/ubuntu/dists/trusty/main/installer-amd64/current/images/netboot/mini.iso) as the starting point. When going through the Ubuntu installer, consider creating the user named "remnux" with the password "malware", though any credentials will work. If building a virtual machine, allocate at least 1GB of RAM and 25GB disk (more recommended).
 
-The latest release of the REMnux distro is version 5. It came out in May 2014. This release added new tools to the distribution and updated those that have been present the prior version. For more details related to REMnux v5, see [its release announcement](https://zeltser.com/remnux-v5-release-for-malware-analysts/).
+Once you've loged into the newly-built or existing system compatible with REMnux, run this command to install the REMnux distro:
 
-Version 4 of the REMnux distro [came out in April 2013](https://zeltser.com/version-4-release-of-remnux-linux-distro-for-malware/). For details regarding REMnux v4, and to see the overview of the tools added to the distro as part of this release, [tune into the recorded webcast on this topic](https://www.youtube.com/watch?v=4LzCr9qf5_Q).
+    wget --quiet -O - https://remnux.org/get-remnux.sh | sudo bash
 
-## Connecting REMnux to the Internet
+This installation script will configure your system and download and install the necessary software without asking you any questions. It requires Internet access to accomplish this. The installer will run for approximately 45 minutes, depending on the strength of your system and the speed of your Internet connection.
 
-The REMnux virtual appliance is configured to use the "host-only" network, isolating the REMnux instance from the physical network. To connect REMnux to the network, for instance, to provide it with Internet access, change the settings of the virtual appliance to the appropriate network, such as "NAT" then issue the `renew-dhcp` command in REMnux.
+## Connecting the REMnux Virtual Appliance to the Internet
+
+The REMnux virtual appliance is initially configured to use the "NAT" mode, so it can connect to the Internet through the host on which it is running. This way, if your underlying host has Internet connectivity, REMnux should be able to access the Internet as well. You can isolate REMnux within your lab by configuring the virtual appliance to use a "host only" network. After switching networks, run the `renew-dhcp` command in REMnux to refresh its network settings.
+
+Some of the REMnux tools are designed to run in an [isolated laboratory environment](https://zeltser.com/vmware-network-isolation-for-malware-analysis/), so you can perform behavioral analysis of malicious software running in the lab. In this case, configure REMnux use a virtual network without Internet connectivity. Other tools are designed to allow you to explore suspicious websites and interact with online resources; REMnux will need to be connected to an Internet-accessible network when performing these tasks.
+
+## Updating Your REMnux System
+
+To update REMnux after connecting your system to the Internet, simply run the `update-remnux` command. This tool will update the software that comprises the REMnux distribution, which includes the applications installed from standard Ubuntu and the REMnux-specific repository. The updater will also installed any tools added to the distro after your last update.
