@@ -2,7 +2,7 @@ This section will eventually contain documentation about the tools installed on 
 
 ## Tools Installed on REMnux
 
-The [listing of tools installed on REMnux][tools.md] outlines and categorizes the utilities you can use for analyzing malicious software on REMnux. For additional details, take a look at the XLSX [spreadsheet](https://REMnux.org/remnux-tools-sheet.xlsx) or the XMind-formatted [mind map](https://REMnux.org/remnux-tools-map.xmind), which outline these tools.
+The [listing of tools installed on REMnux](tools.md) outlines and categorizes the utilities you can use for analyzing malicious software on REMnux. For additional details, take a look at the XLSX [spreadsheet](https://REMnux.org/remnux-tools-sheet.xlsx) or the XMind-formatted [mind map](https://REMnux.org/remnux-tools-map.xmind), which outline these tools.
 
 ## REMnux Cheat Sheet
 
