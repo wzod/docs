@@ -4,7 +4,7 @@ REMnux&trade; is maintained by [Lenny Zeltser](https://zeltser.com/) with extens
 
 ## Documentation
 
-Write documentation for tools installed on the REMnux distro to expand the tips and guidelines that already exist in the [How to Use REMnux Tools](../distro/use.md) section. Please format your document using the popular and easy-to-use [Markdown syntax](https://daringfireball.net/projects/markdown/basics), then [send your docs to Lenny Zeltser](https://zeltser.com/contact/).
+Write documentation for tools installed on the REMnux distro to expand the tips and guidelines that already exist in the [How to Use REMnux Tools](../distro/use.md) section. If you can , please format your document using the popular and easy-to-use [Markdown syntax](https://daringfireball.net/projects/markdown/basics), then [send your docs to Lenny Zeltser](https://zeltser.com/contact/).
 
 ## Dockerfile Configurations
 
@@ -12,4 +12,4 @@ Create Dockerfile configs for building Docker images of malware analysis applica
 
 ## Issues and Fixes
 
-If you come across problems with tools available as part of REMnux, specially if you have suggestions for correcting the issues, please log them on the REMnux [distro repository](https://github.com/REMnux/distro/issues) or [Dockerfile repository](https://github.com/REMnux/docker/issues) on Github.
+If you come across problems with tools available as part of REMnux, specially if you have suggestions for correcting the issues, please log them on the REMnux [distro repository](https://github.com/REMnux/distro/issues) or [Dockerfile repository](https://github.com/REMnux/docker/issues) on Github. You can also email your note to [Lenny Zeltser](https://zeltser.com/contact/).
