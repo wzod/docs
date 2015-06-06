@@ -6,9 +6,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
   
-  <link rel="canonical" href="https://remnux.org/docs/expand/contribute/">
+  <link rel="canonical" href="https://remnux.org/docs/distro/update/">
   
-  <title>Contribute Your Expertise - REMnux Docs</title>
+  <title>Keeping REMnux Up-To-Date - REMnux Docs</title>
   
 
   <link rel="shortcut icon" href="../../favicon.ico">
@@ -24,7 +24,7 @@
   
   <script>
     // Current page data
-    var mkdocs_page_name = "expand/contribute"
+    var mkdocs_page_name = "distro/update"
   </script>
   
   <script src="../../js/jquery-2.1.1.min.js"></script>
@@ -67,28 +67,32 @@
         
             
     <li class="toctree-l1 ">
-        <a class="" href="../../distro/get/">Get the REMnux Distro</a>
+        <a class="" href="../get/">Get the REMnux Distro</a>
         
     </li>
 
         
             
     <li class="toctree-l1 ">
-        <a class="" href="../../distro/tools/">Tools Installed on REMnux</a>
+        <a class="" href="../tools/">Tools Installed on REMnux</a>
         
     </li>
 
         
             
     <li class="toctree-l1 ">
-        <a class="" href="../../distro/use/">Using REMnux and Its Tools</a>
+        <a class="" href="../use/">Using REMnux and Its Tools</a>
         
     </li>
 
         
             
-    <li class="toctree-l1 ">
-        <a class="" href="../../distro/update/">Keeping REMnux Up-To-Date</a>
+    <li class="toctree-l1 current">
+        <a class="current" href="./">Keeping REMnux Up-To-Date</a>
+        
+            <ul>
+            
+            </ul>
         
     </li>
 
@@ -131,21 +135,8 @@
 
         
             
-    <li class="toctree-l1 current">
-        <a class="current" href="./">Contribute Your Expertise</a>
-        
-            <ul>
-            
-                <li class="toctree-l3"><a href="#contribute-your-expertise">Contribute Your Expertise</a></li>
-                
-                    <li><a class="toctree-l4" href="#documentation">Documentation</a></li>
-                
-                    <li><a class="toctree-l4" href="#dockerfile-configurations">Dockerfile Configurations</a></li>
-                
-                    <li><a class="toctree-l4" href="#issues-and-fixes">Issues and Fixes</a></li>
-                
-            
-            </ul>
+    <li class="toctree-l1 ">
+        <a class="" href="../../expand/contribute/">Contribute Your Expertise</a>
         
     </li>
 
@@ -175,11 +166,11 @@
     
       
         
-          <li>Expand REMnux &raquo;</li>
+          <li>REMnux Distro &raquo;</li>
         
       
     
-    <li>Contribute Your Expertise</li>
+    <li>Keeping REMnux Up-To-Date</li>
     <li class="wy-breadcrumbs-aside">
       
     </li>
@@ -189,14 +180,15 @@
           <div role="main">
             <div class="section">
               
-                <h1 id="contribute-your-expertise">Contribute Your Expertise</h1>
-<p>REMnux&trade; is maintained by <a href="https://zeltser.com/">Lenny Zeltser</a> with extensive help from <a href="https://twitter.com/beast_fighter">David Westcott</a>. We could use your assistance! There are several ways in which you can also contribute to the project.</p>
-<h2 id="documentation">Documentation</h2>
-<p>Write documentation for tools installed on the REMnux distro to expand the tips and guidelines that already exist in the <a href="../../distro/use/">How to Use REMnux Tools</a> section. If you can , please format your document using the popular and easy-to-use <a href="https://daringfireball.net/projects/markdown/basics">Markdown syntax</a>, then <a href="https://zeltser.com/contact/">send your docs to Lenny Zeltser</a>. Alternatively, write-up an article explaining how to use one o fthe tools installed on REMnux and send Lenny a link.</p>
-<h2 id="dockerfile-configurations">Dockerfile Configurations</h2>
-<p>Create Dockerfile configs for building Docker images of malware analysis applications that are not yet present in the <a href="../../containers/run-apps/">REMnux Docker image collection</a>. If you are new to Docker, you can learn how to <a href="../../containers/malware-analysis/">distribute and run apps inside containers</a> and how to <a href="../../containers/create-docker-images/">build your own images</a>. Once you have built and tested your Dockerfile, <a href="https://zeltser.com/contact/">share it with Lenny Zeltser</a>.</p>
-<h2 id="issues-and-fixes">Issues and Fixes</h2>
-<p>If you come across problems with tools available as part of REMnux, specially if you have suggestions for correcting the issues, please log them on the REMnux <a href="https://github.com/REMnux/distro/issues">distro repository</a> or <a href="https://github.com/REMnux/docker/issues">Dockerfile repository</a> on Github. You can also email your note to <a href="https://zeltser.com/contact/">Lenny Zeltser</a>.</p>
+                <p>Starting with the <a href="https://zeltser.com/remnux-v6-release-for-malware-analysis/">v6 release</a>, the REMnux distro allows its users to conveniently update REMnux software without having to install the updated REMnux system from scratch. To do this, first connect your REMnux system to the Internet. Then run the following command:</p>
+<pre><code>update-remnux
+</code></pre>
+<p>The script takes 5-10 minutes to run, depending on the speed of your Internet connection and the power of your host. It will update the packages intalled as part of the REMnux environment and add any tools incorporated into the distro since your previous update.</p>
+<p>If you&rsquo;ve added any tools to your environment using &ldquo;apt-get&rdquo; beyond those that came with REMnux, you can run the following commands after &ldquo;update-remnux&rdquo;:</p>
+<pre><code>sudo apt-get update
+sudo apt-get upgrade
+</code></pre>
+<p>Consider following REMnux accounts on <a href="https://twitter.com/REMnux">Twitter</a>, <a href="https://www.facebook.com/REMnux">Facebook</a> and <a href="https://plus.google.com/+REMnuxOrg">Google Plus</a> to receive notifications when its malware analysis packages are updated or when new ones are added to the toolkit.</p>
               
             </div>
           </div>
@@ -204,8 +196,10 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
+        <a href="../../containers/malware-analysis/" class="btn btn-neutral float-right" title="Docker Images for Malware Analysis"/>Next <span class="icon icon-circle-arrow-right"></span></a>
       
-        <a href="../../containers/create-docker-images/" class="btn btn-neutral" title="Creating Docker Images for REMnux"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+        <a href="../use/" class="btn btn-neutral" title="Using REMnux and Its Tools"><span class="icon icon-circle-arrow-left"></span> Previous</a>
       
     </div>
   
@@ -228,8 +222,10 @@ Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://g
     <span class="rst-current-version" data-toggle="rst-current-version">
       
       
-        <span><a href="../../containers/create-docker-images/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+        <span><a href="../use/" style="color: #fcfcfc;">&laquo; Previous</a></span>
       
+      
+        <span style="margin-left: 15px"><a href="../../containers/malware-analysis/" style="color: #fcfcfc">Next &raquo;</a></span>
       
     </span>
 </div>

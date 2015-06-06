@@ -29,6 +29,12 @@
      <changefreq>daily</changefreq>
     </url>
         
+    <url>
+     <loc>https://remnux.org/docs/distro/update/</loc>
+     <lastmod>2015-06-06</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
     
 
     
