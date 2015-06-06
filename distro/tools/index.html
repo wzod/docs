@@ -108,6 +108,9 @@
                 <li class="toctree-l3"><a href="#statically-examine-pe-files">Statically Examine PE Files</a></li>
                 
             
+                <li class="toctree-l3"><a href="#investigate-mobile-malware">Investigate Mobile Malware</a></li>
+                
+            
                 <li class="toctree-l3"><a href="#perform-other-tasks">Perform Other Tasks</a></li>
                 
             
@@ -210,19 +213,19 @@
             <div class="section">
               
                 <p>The REMnux&trade; distribution includes many free tools useful for examining malicious software. These utilities are set up and tested to make it easier for you to perform malware analysis tasks without needing to figure out how to install them. The majority of these tools are listed below.</p>
-<p>For more details, including each tool&rsquo;s description, see the REMnux v5 Tools <a href="https://github.com/REMnux/remnux/blob/v5/remnux-v5-tools.xmind?raw=true">mind map in the Xmind format</a> or as a <a href="https://github.com/REMnux/remnux/blob/v5/remnux-v5-tools.xlsx?raw=true">spreadsheet</a>. <a href="https://github.com/REMnux/remnux/blob/v5/remnux-v5-tools.pdf?raw=true">PDF of the mind map</a> is also available.</p>
+<p>For more details, including each tool&rsquo;s description and source, see the XLSX <a href="https://REMnux.org/remnux-tools-sheet.xlsx">spreadsheet</a> or the XMind-formatted <a href="https://REMnux.org/remnux-tools-map.xmind">mind map</a>. You can also get an overview of the key tools and commands on the <a href="https://zeltser.com/remnux-malware-analysis-tips/">REMnux cheat sheet</a>.</p>
 <h2 id="examine-browser-malware">Examine Browser Malware</h2>
 <ul>
-<li>Website analysis: <a href="https://github.com/buffer/thug">Thug</a>, <a href="http://mitmproxy.org/">mitmproxy</a>, <a href="http://www.netresec.com/?page=NetworkMiner">Network Miner Free Edition</a>, <a href="http://curl.haxx.se/">curl</a>, <a href="https://www.gnu.org/software/wget/">Wget</a>, <a href="http://www.mozilla.org/firefox">Firefox</a>, <a href="http://portswigger.net/burp/">Burp Proxy Free Edition</a>, <a href="http://www.tekdefense.com/automater/">Automater</a>, pdnstool, <a href="http://malzilla.sourceforge.net/">Malzilla</a>, <a href="https://www.torproject.org/">Tor</a></li>
-<li>Flash: <a href="http://hooked-on-mnemonics.blogspot.com/2011/12/xxxswfpy.html">xxxswf</a>, <a href="http://www.swftools.org/">SWF Tools</a>, <a href="https://github.com/CyberShadow/RABCDAsm">RABCDAsm</a>, <a href="https://gist.github.com/noonat/821548">extract_swf</a></li>
-<li>Java: <a href="https://github.com/Rurik/Java_IDX_Parser/">Java Cache IDX Parser</a>, <a href="http://jd.benow.ca/">Java Decompiler</a></li>
-<li>JavaScript: <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Projects/Rhino/Debugger">Rhino Debugger</a>, <a href="http://www.relentless-coding.com/projects/jsdetox/">JSDetox</a>, <a href="http://blog.didierstevens.com/programs/extractscripts/">ExtractScripts</a>, <a href="http://getfirebug.com/">Firebug</a>, <a href="https://addons.mozilla.org/en-us/firefox/addon/javascript-deobfuscator/">JavaScript Deobfuscator</a>, <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Projects/SpiderMonkey">SpiderMonkey</a>, <a href="https://code.google.com/p/v8/">V8</a>, <a href="https://github.com/einars/js-beautify">JS Beautifier</a>, also shellcode tools below</li>
+<li>Website analysis: <a href="https://github.com/buffer/thug">Thug</a>, <a href="http://mitmproxy.org/">mitmproxy</a>, <a href="http://www.netresec.com/?page=NetworkMiner">Network Miner Free Edition</a>, <a href="http://curl.haxx.se/">curl</a>, <a href="https://www.gnu.org/software/wget/">Wget</a>, <a href="http://portswigger.net/burp/">Burp Proxy Free Edition</a>, <a href="http://www.tekdefense.com/automater/">Automater</a>, <a href="https://github.com/chrislee35/passivedns-client">pdnstool</a>,  <a href="https://www.torproject.org/">Tor</a>, <a href="http://tcpxtract.sourceforge.net/">tcpextract</a>, <a href="https://github.com/simsong/tcpflow">tcpflow</a>, passive.py, <a href="https://github.com/omriher/CapTipper">CapTipper</a></li>
+<li>Flash: <a href="http://hooked-on-mnemonics.blogspot.com/2011/12/xxxswfpy.html">xxxswf</a>, <a href="http://www.swftools.org/">SWF Tools</a>, <a href="https://github.com/CyberShadow/RABCDAsm">RABCDAsm</a>, <a href="https://gist.github.com/noonat/821548">extract_swf</a>, <a href="http://www.nowrap.de/flare.html">Flare</a></li>
+<li>Java: <a href="https://github.com/Rurik/Java_IDX_Parser/">Java Cache IDX Parser</a>, <a href="http://jd.benow.ca/">JD-GUI Java Decompiler</a>, <a href="http://varaneckas.com/jad">JAD Java Decompiler</a>, <a href="http://www.javassist.org">Javassist</a>, <a href="http://www.benf.org/other/cfr/">CFR</a></li>
+<li>JavaScript: <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Projects/Rhino/Debugger">Rhino Debugger</a>, <a href="http://blog.didierstevens.com/programs/extractscripts/">ExtractScripts</a>, <a href="http://getfirebug.com/">Firebug</a>,  <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Projects/SpiderMonkey">SpiderMonkey</a>, <a href="https://code.google.com/p/v8/">V8</a>, <a href="https://github.com/einars/js-beautify">JS Beautifier</a></li>
 </ul>
 <h2 id="examine-document-files">Examine Document Files</h2>
 <ul>
-<li>PDF: <a href="https://github.com/hiddenillusion/AnalyzePDF">AnalyzePDF</a>, <a href="http://www.relentless-coding.com/projects/jsdetox/">JSDetox</a>, <a href="http://www.aldeid.com/wiki/Pdfobjflow">Pdfobjflow</a>, <a href="http://blog.didierstevens.com/programs/pdf-tools/">pdfid</a>, <a href="http://blog.didierstevens.com/programs/pdf-tools/">pdf-parser</a>, <a href="https://code.google.com/p/peepdf/">peepdf</a>, <a href="http://esec-lab.sogeti.com/pages/Origami">Origami</a>, <a href="https://github.com/9b/pdfxray_lite">PDF X-RAY Lite</a>, <a href="http://www.pdflabs.com/tools/pdftk-the-pdf-toolkit/">PDFtk</a>; also JavaScript tools above</li>
-<li>Microsoft Office: <a href="https://github.com/unixfreak0037/officeparser">officeparser</a>, <a href="http://www.reconstructer.org/code.html">OfficeMalScanner</a></li>
-<li>Shellcode: <a href="http://libemu.carnivore.it/">sctest</a>, unicode2hex-escaped, unicode2raw, <a href="http://hooked-on-mnemonics.blogspot.com/2012/10/dism-thispy.html">dism-this</a></li>
+<li>PDF: <a href="https://github.com/hiddenillusion/AnalyzePDF">AnalyzePDF</a>, <a href="http://www.aldeid.com/wiki/Pdfobjflow">Pdfobjflow</a>, <a href="http://blog.didierstevens.com/programs/pdf-tools/">pdfid</a>, <a href="http://blog.didierstevens.com/programs/pdf-tools/">pdf-parser</a>, <a href="http://eternal-todo.com/tools/peepdf-pdf-analysis-tool#releases">peepdf</a>, <a href="https://code.google.com/p/origami-pdf/">Origami</a>, <a href="https://github.com/9b/pdfxray_lite">PDF X-RAY Lite</a>, <a href="http://www.pdflabs.com/tools/pdftk-the-pdf-toolkit/">PDFtk</a>, <a href="http://blog.9bplus.com/snatching-swf-from-pdfs-made-easier/">swf_mastah</a></li>
+<li>Microsoft Office: <a href="https://github.com/unixfreak0037/officeparser">officeparser</a>, <a href="https://github.com/Evilcry/PythonScripts/raw/master/">pyOLEScanner.py</a>, <a href="http://www.decalage.info/python/oletools">oletools</a>, <a href="https://github.com/libyal/libolecf">libolecf</a>, <a href="http://blog.didierstevens.com/programs/oledump-py/">oledump</a>, <a href="https://isc.sans.edu/diary/Malicious+Word+Document+This+Time+The+Maldoc+Is+A+MIME+File/19673/">emldump</a></li>
+<li>Shellcode: <a href="http://libemu.carnivore.it/">sctest</a>, unicode2hex-escaped, unicode2raw, <a href="http://hooked-on-mnemonics.blogspot.com/2012/10/dism-thispy.html">dism-this</a>, <a href="https://github.com/MarioVilas/shellcode_tools/blob/master/shellcode2exe.py">shellcode2exe</a></li>
 </ul>
 <h2 id="extract-and-decode-artifacts">Extract and Decode Artifacts</h2>
 <ul>
@@ -233,7 +236,7 @@
 <h2 id="handle-network-interactions">Handle Network Interactions</h2>
 <ul>
 <li>Sniffing: <a href="http://www.wireshark.org/">Wireshark</a>, <a href="http://ngrep.sourceforge.net/">ngrep</a>, <a href="http://www.tcpdump.org/">TCPDump</a>, <a href="http://tcpick.sourceforge.net/">tcpick</a></li>
-<li>Services: <a href="http://code.activestate.com/recipes/491264-mini-fake-dns-server/">FakeDNS</a>, <a href="http://sourceforge.net/projects/tinyhttpd/">Tiny HTTPd</a>, <a href="http://sourceforge.net/projects/fakemail/">fakeMail</a>, <a href="http://www.honeyd.org/">Honeyd</a>, <a href="http://www.inetsim.org/">INetSim</a>, <a href="http://www.inspircd.org/">Inspire IRCd</a>, <a href="http://www.wireshark.org/">OpenSSH</a></li>
+<li>Services: <a href="http://code.activestate.com/recipes/491264-mini-fake-dns-server/">FakeDNS</a>, <a href="http://nginx.org/">Nginx</a>, <a href="http://sourceforge.net/projects/fakemail/">fakeMail</a>, <a href="http://www.honeyd.org/">Honeyd</a>, <a href="http://www.inetsim.org/">INetSim</a>, <a href="http://www.inspircd.org/">Inspire IRCd</a>, <a href="http://www.openssh.com/">OpenSSH</a>, accept-all-ips</li>
 <li>Miscellaneous network: <a href="https://bitbucket.org/denilsonsa/small_scripts/src/3ec16014c839ea0852fae492813ad2293bd61155/prettyping.sh">prettyping.sh</a>, set-static-ip, renew-dhcp, <a href="http://netcat.sourceforge.net/">Netcat</a>, <a href="http://www.epicsol.org/">EPIC IRC Client</a>, <a href="https://www.stunnel.org/">stunnel</a></li>
 </ul>
 <h2 id="process-multiple-samples">Process Multiple Samples</h2>
@@ -242,9 +245,9 @@
 </ul>
 <h2 id="examine-file-properties-and-contents">Examine File Properties and Contents</h2>
 <ul>
-<li>Define signatures: <a href="https://github.com/Xen0ph0n/YaraGenerator">YaraGenerator</a>, <a href="https://code.google.com/p/yara-editor/">Yara Editor</a>, <a href="https://github.com/stephenbrannon/IOCextractor">IOCextractor</a>, <a href="http://joxeankoret.com/blog/2012/04/29/extracting-binary-patterns-in-malware-sets-and-generating-yara-rules/">Autorule</a></li>
-<li>Scan: <a href="http://plusvic.github.io/yara/">Yara</a>, <a href="http://www.clamav.net/">ClamAV</a>, <a href="http://mark0.net/soft-trid-e.html">TrID</a>, <a href="http://www.sno.phy.queensu.ca/~phil/exiftool/">ExifTool</a></li>
-<li>Hashes: <a href="https://github.com/rjhansen/nsrllookup">nsrllookup</a>, <a href="http://www.tekdefense.com/automater/">Automater</a>, <a href="https://code.google.com/p/hash-identifier/">Hash Identifier</a>, <a href="https://gist.github.com/malc0de/10270150">totalhash</a>, <a href="http://ssdeep.sourceforge.net/">ssdeep</a></li>
+<li>Define signatures: <a href="https://github.com/Xen0ph0n/YaraGenerator">YaraGenerator</a>, <a href="https://github.com/stephenbrannon/IOCextractor">IOCextractor</a>, <a href="http://joxeankoret.com/blog/2012/04/29/extracting-binary-patterns-in-malware-sets-and-generating-yara-rules/">Autorule</a>, <a href="https://github.com/ifontarensky/RuleEditor">Rule Editor</a></li>
+<li>Scan: <a href="http://plusvic.github.io/yara/">Yara</a>, <a href="http://www.clamav.net/">ClamAV</a>, <a href="http://mark0.net/soft-trid-e.html">TrID</a>, <a href="http://www.sno.phy.queensu.ca/~phil/exiftool/">ExifTool</a>, <a href="http://blog.didierstevens.com/programs/virustotal-tools/">virustotal-submit</a>, <a href="http://blog.didierstevens.com/programs/disitool/">Disitool</a></li>
+<li>Hashes: <a href="https://github.com/rjhansen/nsrllookup">nsrllookup</a>, <a href="http://www.tekdefense.com/automater/">Automater</a>, <a href="https://code.google.com/p/hash-identifier/">Hash Identifier</a>, <a href="https://gist.github.com/malc0de/10270150">totalhash</a>, <a href="http://ssdeep.sourceforge.net/">ssdeep</a>, <a href="http://blog.didierstevens.com/programs/virustotal-tools/">virustotal-search</a></li>
 </ul>
 <h2 id="investigate-linux-malware">Investigate Linux Malware</h2>
 <ul>
@@ -252,40 +255,43 @@
 <li>Disassemble: <a href="http://visi.kenshoto.com/viki/Vivisect">Vivisect</a>, <a href="http://udis86.sourceforge.net/">Udis86</a>, <a href="http://en.wikipedia.org/wiki/Objdump">objdump</a></li>
 <li>Debug: <a href="http://codef00.com/projects#debugger">Evan&rsquo;s Debugger (EDB)</a>, <a href="http://www.sourceware.org/gdb/">GNU Project Debugger (GDB)</a></li>
 <li>Trace: <a href="https://sourceforge.net/projects/strace/">strace</a>, <a href="http://ltrace.org/">ltrace</a></li>
-<li>Investigate: <a href="https://github.com/radare/radare2">Radare 2</a>, <a href="https://code.google.com/p/pyew/">Pyew</a>, <a href="https://inguma.eu/projects/bokken">Bokken</a></li>
+<li>Investigate: <a href="https://github.com/radare/radare2">Radare 2</a>, <a href="https://code.google.com/p/pyew/">Pyew</a>, <a href="https://inguma.eu/projects/bokken">Bokken</a>, <a href="https://github.com/XlogicX/m2elf">m2elf</a></li>
 </ul>
 <h2 id="edit-and-view-files">Edit and View Files</h2>
 <ul>
-<li>Text: <a href="http://www.scintilla.org/SciTE.html">SciTE</a></li>
+<li>Text: <a href="http://www.scintilla.org/SciTE.html">SciTE</a>, <a href="http://www.geany.org/">Geany</a>, <a href="http://www.vim.org/">Vim</a></li>
 <li>Images: <a href="http://feh.finalrewind.org/">feh</a>, <a href="http://www.imagemagick.org/">ImageMagick</a></li>
 <li>Binary: <a href="http://sourceforge.net/projects/wxhexeditor/">wxHexEditor</a>, <a href="http://www.cjmweb.net/vbindiff/">VBinDiff</a></li>
-<li>Documents: <a href="http://www.foolabs.com/xpdf/">Xpdf</a>, <a href="http://www.xmind.net/">XMind</a></li>
+<li>Documents: <a href="http://www.foolabs.com/xpdf/">Xpdf</a></li>
 </ul>
 <h2 id="examine-memory-snapshots">Examine Memory Snapshots</h2>
 <ul>
-<li><a href="https://code.google.com/p/volatility/">Volatility Framework</a>, <a href="https://github.com/sketchymoose/TotalRecall">TotalRecall</a>, <a href="http://jessekornblum.livejournal.com/269749.html">findaes</a>, AESKeyFinder, RSAKeyFinder</li>
+<li><a href="https://github.com/volatilityfoundation/volatility">Volatility Framework</a>, <a href="http://jessekornblum.livejournal.com/269749.html">findaes</a>, AESKeyFinder, RSAKeyFinder, <a href="https://github.com/aim4r/VolDiff">VolDiff</a>, <a href="http://www.rekall-forensic.com/">Rekall</a></li>
 </ul>
 <h2 id="statically-examine-pe-files">Statically Examine PE Files</h2>
 <ul>
 <li>Unpacking: <a href="http://upx.sourceforge.net/">UPX</a>, <a href="https://www.cert.at/downloads/software/bytehist_en.html">Bytehist</a>, <a href="http://www.cert.at/downloads/software/densityscout_en.html">Density Scout</a>, <a href="http://handlers.sans.org/jclausing/packerid.py">PackerID</a></li>
 <li>Disassemble: <a href="http://en.wikipedia.org/wiki/Objdump">objdump</a>, <a href="http://udis86.sourceforge.net/">Udis86</a>, <a href="http://visi.kenshoto.com/viki/Vivisect">Vivisect</a></li>
-<li>Find anomalies: <a href="http://aluigi.altervista.org/mytoolz.htm">Signsrch</a>, <a href="https://code.google.com/p/malwarecookbook/source/browse/trunk/3/8/pescanner.py">pescanner</a>, <a href="http://securityxploded.com/exe-scan.php">ExeScan</a>, <a href="http://pev.sourceforge.net/">pev</a>, <a href="https://github.com/guelfoweb/peframe">Peframe</a></li>
-<li>Investigate: <a href="https://inguma.eu/projects/bokken">Bokken</a>, <a href="https://github.com/kevthehermit/RATDecoders">RATDecoders</a>, <a href="https://code.google.com/p/pyew/">Pyew</a></li>
+<li>Find anomalies: <a href="http://aluigi.altervista.org/mytoolz.htm">Signsrch</a>, <a href="https://code.google.com/p/malwarecookbook/source/browse/trunk/3/8/pescanner.py">pescanner</a>, <a href="http://securityxploded.com/exe-scan.php">ExeScan</a>, <a href="http://pev.sourceforge.net/">pev</a>, <a href="https://github.com/guelfoweb/peframe">Peframe</a>, <a href="http://pedump.me/">pedump</a></li>
+<li>Investigate: <a href="https://inguma.eu/projects/bokken">Bokken</a>, <a href="https://github.com/kevthehermit/RATDecoders">RATDecoders</a>, <a href="https://code.google.com/p/pyew/">Pyew</a>, <a href="https://github.com/crackinglandia/pype32">readpe.py</a></li>
+</ul>
+<h2 id="investigate-mobile-malware">Investigate Mobile Malware</h2>
+<ul>
+<li><a href="https://github.com/maaaaz/androwarn">Androwarn</a>, <a href="https://github.com/androguard/androguard">AndroGuard</a></li>
 </ul>
 <h2 id="perform-other-tasks">Perform Other Tasks</h2>
 <ul>
-<li><a href="http://www.procdot.com/">ProcDOT</a>, <a href="https://github.com/merces/bashacks">bashhacks</a>, <a href="https://github.com/maaaaz/androwarn">Androwarn</a></li>
+<li><a href="http://www.procdot.com/">ProcDOT</a>, <a href="https://github.com/merces/bashacks">bashhacks</a>, <a href="http://www.docker.com/">Docker</a>, <a href="https://code.google.com/p/malware-crawler/wiki/vtTool">vtTool</a>, REMnux Updater</li>
 </ul>
 <h2 id="install-additional-tools">Install Additional Tools</h2>
+<ul>
+<li>
 <p><a href="https://github.com/rapid7/metasploit-framework">Metasploit</a> is not installed on REMnux; however, <a href="https://zeltser.com/install-metasploit-on-remnux/">you can install it yourself</a> if the need arises.</p>
-<p><a href="https://github.com/TheDr1ver/WIPSTER">WIPSTER</a> offers a web-based interface to several REMnux tools. You can easily install WIPSTER on REMnux by running the command <code>/usr/local/sbin/install-wipster</code>.</p>
-<p><a name="vtTool"></a><a href="https://code.google.com/p/malware-crawler/wiki/vtTool">vtTool</a> offers a convenient way of determining the likely name of malware by querying VirusTotal using the file&rsquo;s hash via the command line. To install it on REMnux after connecting the REMnux system to the Internet, run the following commands:</p>
-<pre><code>sudo apt-get -y install python-numpy python-scipy python-levenshtein
-sudo pip install fuzzywuzzy scikit-learn
-wget https://malware-crawler.googlecode.com/svn/MalwareCrawler/src/tools/vtTool.py
-chmod a+xr vtTool.py
-sudo mv vtTool.py /usr/local/bin
-</code></pre>
+</li>
+<li>
+<p><a href="https://github.com/TheDr1ver/WIPSTER">WIPSTER</a> offers a web-based interface to several REMnux tools. You can easily install WIPSTER on REMnux by running the command <code>install-wipster</code>.</p>
+</li>
+</ul>
               
             </div>
           </div>
@@ -304,10 +310,6 @@ sudo mv vtTool.py /usr/local/bin
   <hr/>
 
   <div role="contentinfo">
-    <p>
-    <!-- Copyright etc -->
-    
-    </p>
   </div>
 Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
 </footer>
