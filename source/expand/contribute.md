@@ -4,7 +4,7 @@ REMnux&trade; is maintained by [Lenny Zeltser](https://zeltser.com/) with extens
 
 ## Documentation
 
-Write documentation for tools installed on the REMnux distro to expand the tips and guidelines that already exist in the [How to Use REMnux Tools](../distro/use.md) section. If you can , please format your document using the popular and easy-to-use [Markdown syntax](https://daringfireball.net/projects/markdown/basics), then [send your docs to Lenny Zeltser](https://zeltser.com/contact/).
+Write documentation for tools installed on the REMnux distro to expand the tips and guidelines that already exist in the [How to Use REMnux Tools](../distro/use.md) section. If you can , please format your document using the popular and easy-to-use [Markdown syntax](https://daringfireball.net/projects/markdown/basics), then [send your docs to Lenny Zeltser](https://zeltser.com/contact/). Alternatively, write-up an article explaining how to use one o fthe tools installed on REMnux and send Lenny a link.
 
 ## Dockerfile Configurations
 
