@@ -16,6 +16,7 @@ pages:
     - 'Get the REMnux Distro': 'distro/get.md'
     - 'Tools Installed on REMnux': 'distro/tools.md'
     - 'Using REMnux and Its Tools': 'distro/use.md'
+    - 'Keeping REMnux Up-To-Date': 'distro/update.md'
 
   - Application Containers: 
     - 'Docker Images for Malware Analysis': 'containers/malware-analysis.md'
