@@ -2,11 +2,13 @@ The heart of the [REMnux](https://REMnux.org/)&trade; project is the REMnux Linu
 
 ## Download the REMnux Virtual Appliance
 
-The simplest way to get the distro is to [download the REMnux virtual appliance file] (http://sourceforge.net/projects/remnux/files/version6/remnux-6.0-ova-public.ova/download) in the OVA format. The file is around 2GB in size; its SHA-256 hash is C26BE9831CA414F5A4D908D793E0B8934470B3887C48CFE82F86943236968AE6.
+The simplest way to get the distro is to [download the REMnux virtual appliance file](http://sourceforge.net/projects/remnux/files/version6/remnux-6.0-ova-public.ova/download) in the OVA format. 
 
-You'll need to install virtualization software such as [VMware Player](http://www.vmware.com/products/player/), [VMware Workstation](http://www.vmware.com/products/workstation/), [VMware Fusion](http://www.vmware.com/products/fusion/) and [VirtualBox](https://www.virtualbox.org/) prior to using the REMnux virtual appliance.
+The file is around 2GB in size; its SHA-256 hash is C26BE9831CA414F5A4D908D793E0B8934470B3887C48CFE82F86943236968AE6. You'll need to install virtualization software such as [VMware Player](http://www.vmware.com/products/player/), [VMware Workstation](http://www.vmware.com/products/workstation/), [VMware Fusion](http://www.vmware.com/products/fusion/) and [VirtualBox](https://www.virtualbox.org/) prior to using the REMnux virtual appliance.
 
-Once you've downloaded the REMnux OVA file, import it into your virtualization software, then start the virtual machine. It will automatically log you into the environment using the user named "remnux". The user's password is "malware"; you might need to specify it when performing privileged operations.
+Once you've downloaded the REMnux OVA file, import it into your virtualization software, then start the virtual machine. For step-by-step instructions for importing the virtual appliance, take a look at the [VirtualBox screenshot](https://plus.google.com/photos/+REMnuxOrg/albums/6157106174723932177?authkey=CIyg87D27tymcw) and [VMware Workstation screenshot](https://plus.google.com/photos/+REMnuxOrg/albums/6157110042890668913?authkey=CI6cuIrXtoPmrAE) slideshows.
+
+It will automatically log you into the environment using the user named "remnux". The user's password is "malware"; you might need to specify it when performing privileged operations.
 
 After booting into the virtual appliance, run the `update-remnux full` command on REMnux to update its software. This will allow you to benefit from any enhancements introduced after the virtual appliance has been packaged. Your system needs to have Internet access for this to work.
 
