@@ -2,7 +2,7 @@ The heart of the [REMnux](https://REMnux.org/)&trade; project is the REMnux Linu
 
 ## Download the REMnux Virtual Appliance
 
-The simplest way to get the REMnux distro is to [download its virtual appliance OVA file] (http://sourceforge.net/projects/remnux/files/version6/remnux-6.0-ova-public.ova/download). The file is 1.98 GB in size; its SHA-256 hash is C26BE9831CA414F5A4D908D793E0B8934470B3887C48CFE82F86943236968AE6.
+The simplest way to get the REMnux distro is to [download its virtual appliance OVA file] (http://sourceforge.net/projects/remnux/files/version6/remnux-6.0-ova-public.ova/download). The file is around 2GB in size; its SHA-256 hash is C26BE9831CA414F5A4D908D793E0B8934470B3887C48CFE82F86943236968AE6.
 
 You'll need to install virtualization software such as [VMware Player](http://www.vmware.com/products/player/), [VMware Workstation](http://www.vmware.com/products/workstation/), [VMware Fusion](http://www.vmware.com/products/fusion/) and [VirtualBox](https://www.virtualbox.org/) prior to using the REMnux virtual appliance.
 
@@ -36,7 +36,7 @@ When running REMnux on VMware Workstation, Player or ESX, the simplest way to in
 
     sudo apt-get install open-vm-tools-desktop
     
-On VMware Fusion, the best approach is to install proprietary VMware Tools. To do this, activate the VMware Tools installation via Virtual Machine > Install VMware Tools, then run the command `install-vmware-tools` on REMnux. You can install VMware Tools this way on VMware Workstation and Player as well. For additional details, see the [VMware article on this topic](http://kb.vmware.com/kb/1022525).
+On VMware Fusion, the best approach is to install proprietary VMware Tools. To do this, activate the VMware Tools installation via Virtual Machine > Install VMware Tools, then run the command `sudo install-vmware-tools` on REMnux. You can install VMware Tools this way on VMware Workstation and Player as well. For additional details, see the [VMware article on this topic](http://kb.vmware.com/kb/1022525).
 
 Please note that if you wish to use the shared folders feature of VMware, you will need to install proprietary VMware Tools with several adjustments to compensate for a compatibility issue between VMware Tools and the Ubuntu-supplied Linux kernel. These steps are described in an [article devoted to this topic](http://askubuntu.com/questions/586221/vmhgfs-module-not-compilable-for-vmware-tools-9-9-0-fusion7-1-after-ubuntu-lin). A more practical option for transferring files in and out of REMnux might be to use SFTP through the installed SSH server (`sshd start`) instead of using shared folders.
 
