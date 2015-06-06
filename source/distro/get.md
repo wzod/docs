@@ -2,7 +2,7 @@ The heart of the [REMnux](https://REMnux.org/)&trade; project is the REMnux Linu
 
 ## Download the REMnux Virtual Appliance
 
-The simplest way to get the REMnux distro is to [download its virtual appliance OVA file] (http://sourceforge.net/projects/remnux/files/version6/remnux-6.0-ova-public.ova/download). The file is around 2GB in size; its SHA-256 hash is C26BE9831CA414F5A4D908D793E0B8934470B3887C48CFE82F86943236968AE6.
+The simplest way to get the distro is to [download the REMnux virtual appliance file] (http://sourceforge.net/projects/remnux/files/version6/remnux-6.0-ova-public.ova/download) in the OVA format. The file is around 2GB in size; its SHA-256 hash is C26BE9831CA414F5A4D908D793E0B8934470B3887C48CFE82F86943236968AE6.
 
 You'll need to install virtualization software such as [VMware Player](http://www.vmware.com/products/player/), [VMware Workstation](http://www.vmware.com/products/workstation/), [VMware Fusion](http://www.vmware.com/products/fusion/) and [VirtualBox](https://www.virtualbox.org/) prior to using the REMnux virtual appliance.
 
