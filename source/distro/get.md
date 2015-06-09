@@ -8,7 +8,9 @@ The file is around 2GB in size; its SHA-256 hash is C26BE9831CA414F5A4D908D793E0
 
 Once you've downloaded the REMnux OVA file, import it into your virtualization software, then start the virtual machine. For step-by-step instructions for importing the virtual appliance, take a look at the [VirtualBox screenshot](https://plus.google.com/photos/+REMnuxOrg/albums/6157106174723932177?authkey=CIyg87D27tymcw) and [VMware Workstation screenshot](https://plus.google.com/photos/+REMnuxOrg/albums/6157110042890668913?authkey=CI6cuIrXtoPmrAE) slideshows.
 
-It will automatically log you into the environment using the user named "remnux". The user's password is "malware"; you might need to specify it when performing privileged operations.
+There is no need to extract contents of the OVA file manually before importing it. Simply load the OVA file into your virtualization software to begin the import. If you attempt to extract OVA file's contents and try importing the embedded OVF file in VirtualBox, you will likely encounter an error, such as "could not verify the content of REMnux.mf against the available files, unsupported digest type."
+
+Once you boot up the imported virtual machine, it will automatically log you into the system using the user named "remnux". The user's password is "malware"; you might need to specify it when performing privileged operations.
 
 After booting into the virtual appliance, run the `update-remnux full` command on REMnux to update its software. This will allow you to benefit from any enhancements introduced after the virtual appliance has been packaged. Your system needs to have Internet access for this to work.
 
@@ -23,6 +25,8 @@ Once you've logged into the newly-built or existing system compatible with REMnu
     wget --quiet -O - https://remnux.org/get-remnux.sh | sudo bash
 
 This installation script will configure your system and download and install the necessary software without asking you any questions. It requires Internet access to accomplish this. The installer will run for approximately 45 minutes, depending on the strength of your system and the speed of your Internet connection.
+
+A handful of people running the installation script within virtual machines noticed that the antivirus tool installed on their underlying host flagged some REMnux packages as malicious and blocked their download. This is a false alarm. However, if you encounter this, you might need to disable the host's anivirus tool while running the script or whitelist the offending files or URLs to avoid getting them blocked.
 
 ## Connecting the REMnux Virtual Appliance to the Internet
 
