@@ -35,7 +35,7 @@ For more details, including each tool's description and source, see the XLSX [sp
 
 - Define signatures: [YaraGenerator](https://github.com/Xen0ph0n/YaraGenerator), [IOCextractor](https://github.com/stephenbrannon/IOCextractor), [Autorule](http://joxeankoret.com/blog/2012/04/29/extracting-binary-patterns-in-malware-sets-and-generating-yara-rules/), [Rule Editor](https://github.com/ifontarensky/RuleEditor)
 - Scan: [Yara](http://plusvic.github.io/yara/), [ClamAV](http://www.clamav.net/), [TrID](http://mark0.net/soft-trid-e.html), [ExifTool](http://www.sno.phy.queensu.ca/~phil/exiftool/), [virustotal-submit](http://blog.didierstevens.com/programs/virustotal-tools/), [Disitool](http://blog.didierstevens.com/programs/disitool/)
-- Hashes: [nsrllookup](https://github.com/rjhansen/nsrllookup), [Automater](http://www.tekdefense.com/automater/), [Hash Identifier](https://code.google.com/p/hash-identifier/), [totalhash](https://gist.github.com/malc0de/10270150), [ssdeep](http://ssdeep.sourceforge.net/), [virustotal-search](http://blog.didierstevens.com/programs/virustotal-tools/)
+- Hashes: [nsrllookup](https://github.com/rjhansen/nsrllookup), [Automater](http://www.tekdefense.com/automater/), [Hash Identifier](https://code.google.com/p/hash-identifier/), [totalhash](https://gist.github.com/malc0de/10270150), [ssdeep](http://ssdeep.sourceforge.net/), [virustotal-search](http://blog.didierstevens.com/programs/virustotal-tools/), [VirusTotalApi](https://github.com/doomedraven/VirusTotalApi)
 
 ## Investigate Linux Malware
 
