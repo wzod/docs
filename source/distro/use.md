@@ -22,6 +22,7 @@ Here are some of the blog posts and articles written about using REMnux for malw
 
 - [Dynamic Malware Analysis With REMnux](http://countuponsecurity.com/2015/01/13/dynamic-malware-analysis-with-remnux-v5-part-1/) by Luis Rocha, continued in [part 2](http://countuponsecurity.com/2015/01/21/dynamic-malware-analysis-with-remnux-v5-part-2/)
 - [Memory Forensics With Volatility on REMnux](http://countuponsecurity.com/2015/03/16/memory-forensics-with-volatility-on-remnux-v5-part-1/) by Luis Rocha, continued in [part 2](http://countuponsecurity.com/2015/03/18/memory-forensics-with-volatility-on-remnux-v5-part-2/)
+- [Getting What You Want Out of a PDF with REMnux](http://hiddenillusion.blogspot.com/2012/06/getting-what-you-want-out-of-pdf-with.html) by Glenn Edwards
 - [REMnux: Reverse-Engineering Malware](http://www.techrepublic.com/blog/it-security/remnux-reverse-engineering-malware/) by Michael Kassner
 - [Malware Analysis Lab - A Fast and Cost Effective "HowTo"](http://www.cybersquared.com/2012/06/malware-analysis-lab-a-fast-and-cost-effective-howto/) by ThreatConnect
 - [REMnux Tutorial: Statically Analyse Portable Executablei (PE) Files](http://www.slideshare.net/RhydhamJoshi/remnux-tutorial1-statically-analyse-portable-executablepe-files) by Rhydham Joshi, continued in [Part 2: Extraction and Decoding of Artifacts](http://www.slideshare.net/RhydhamJoshi/remnux-tutorial2-extraction-and-decoding-of-artifacts)
