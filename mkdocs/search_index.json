@@ -112,7 +112,7 @@
         }, 
         {
             "location": "/distro/use/", 
-            "text": "This section will eventually contain documentation about the tools installed on the REMnux\n distro. Would you like to \ncontribute your insights on REMnux and its tools\n to expand this document set?\n\n\nTools Installed on REMnux\n\n\nThe \nlisting of tools installed on REMnux\n outlines and categorizes the utilities you can use for analyzing malicious software on REMnux. For additional details, take a look at the XLSX \nspreadsheet\n or the XMind-formatted \nmind map\n, which outline these tools.\n\n\nREMnux Cheat Sheet\n\n\nThe one-page \nREMnux cheat sheet\n highlights some of the most useful tools and commands available on REMnux. It\ns an especially nice starting point for people who are new to the distro.\n\n\nRecorded REMnux Webcasts\n\n\nTo get started with the REMnux distro and become familiar with some of its capabilities, tune into the following recorded webcasts:\n\n\n\n\nMalware Analysis Essentials Using REMnux\n\n\nWhat\ns New in REMnux v4", 
+            "text": "This section will eventually contain documentation about the tools installed on the REMnux\n distro. Would you like to \ncontribute your insights on REMnux and its tools\n to expand this document set?\n\n\nTools Installed on REMnux\n\n\nThe \nlisting of tools installed on REMnux\n outlines and categorizes the utilities you can use for analyzing malicious software on REMnux. For additional details, take a look at the XLSX \nspreadsheet\n or the XMind-formatted \nmind map\n, which outline these tools.\n\n\nREMnux Cheat Sheet\n\n\nThe one-page \nREMnux cheat sheet\n highlights some of the most useful tools and commands available on REMnux. It\ns an especially nice starting point for people who are new to the distro.\n\n\nRecorded REMnux Webcasts\n\n\nTo get started with the REMnux distro and become familiar with some of its capabilities, tune into the following recorded webcasts:\n\n\n\n\nMalware Analysis Essentials Using REMnux\n\n\nWhat\ns New in REMnux v4\n\n\n\n\nArticles and Blog Posts on Using REMnux\n\n\nHere are some of the blog posts and articles written about using REMnux for malware analysis:\n\n\n\n\nDynamic Malware Analysis With REMnux\n by Luis Rocha (continued in \npart 2\n)\n\n\nMemory Forensics With Volatility on REMnux\n by Luis Rocha (continued in \npart 2\n)\n\n\nREMnux: Reverse-Engineering Malware\n by Michael Kassner\n\n\n\n\nIf you write or locate other tutorials or articles that demonstrate the use of REMnux, please \nlet Lenny Zeltser know\n.", 
             "title": "Using REMnux and Its Tools"
         }, 
         {
@@ -129,6 +129,11 @@
             "location": "/distro/use/#recorded-remnux-webcasts", 
             "text": "To get started with the REMnux distro and become familiar with some of its capabilities, tune into the following recorded webcasts:   Malware Analysis Essentials Using REMnux  What s New in REMnux v4", 
             "title": "Recorded REMnux Webcasts"
+        }, 
+        {
+            "location": "/distro/use/#articles-and-blog-posts-on-using-remnux", 
+            "text": "Here are some of the blog posts and articles written about using REMnux for malware analysis:   Dynamic Malware Analysis With REMnux  by Luis Rocha (continued in  part 2 )  Memory Forensics With Volatility on REMnux  by Luis Rocha (continued in  part 2 )  REMnux: Reverse-Engineering Malware  by Michael Kassner   If you write or locate other tutorials or articles that demonstrate the use of REMnux, please  let Lenny Zeltser know .", 
+            "title": "Articles and Blog Posts on Using REMnux"
         }, 
         {
             "location": "/distro/update/", 
