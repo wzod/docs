@@ -52,9 +52,7 @@ If you want Thug to examine a single website and don't need an interactive shell
 
     sudo docker run --rm -it -v ~/logs:/home/thug/logs remnux/thug ./thug.py -F http://example.com
 
-In the example above, we launched the Thug image and specified that the command to run within it should be `./thug.py http://example.com`. We also directed Docker to share the underlying host's ~/log directory, which is where Thug saved the results of its analysis.
-
-![Non-Interactive Thug Session](remnux-docker-thug2.png)
+In the example above, we launched the Thug image and specified that the command to run within it should be `./thug.py -F http://example.com`. We also directed Docker to share the underlying host's ~/log directory, which is where Thug saved the results of its analysis.
 
 ## Viper Binary Analysis Framework: remnux/viper
 
