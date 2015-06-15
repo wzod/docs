@@ -239,10 +239,11 @@
 </code></pre>
 <p>In the example above, the ~/logs directory will be shared between your host and the container. Before running the command above, make sure that ~/logs exists and that its permissions are world-readable (i.e., <code>chmod a+xwr</code>). If you&rsquo;d like to share an additional directory (e.g., &ldquo;files&rdquo;), supply the mapping using another -v parameter such as <code>-v ~/files:/home/thug/files</code> and remember to make the directory on your host world-accessible.</p>
 <p>Once in the container, you might want to invoke the Thug application using a command like this:</p>
-<pre><code>./thug.py http://example.com
+<pre><code>./thug.py -F http://example.com
 </code></pre>
+<p>The <code>-F</code> parameter directs Thug to enable file logging, so it saves extracted artifacts to &ldquo;logs&rdquo; and &ldquo;files&rdquo; directories.</p>
 <p>If you want Thug to examine a single website and don&rsquo;t need an interactive shell, you could run its image like this:</p>
-<pre><code>sudo docker run --rm -it -v ~/logs:/home/thug/logs remnux/thug ./thug.py http://example.com
+<pre><code>sudo docker run --rm -it -v ~/logs:/home/thug/logs remnux/thug ./thug.py -F http://example.com
 </code></pre>
 <p>In the example above, we launched the Thug image and specified that the command to run within it should be <code>./thug.py http://example.com</code>. We also directed Docker to share the underlying host&rsquo;s ~/log directory, which is where Thug saved the results of its analysis.</p>
 <p><img alt="Non-Interactive Thug Session" src="../containers/remnux-docker-thug2.png" /></p>
