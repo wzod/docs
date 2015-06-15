@@ -245,8 +245,7 @@
 <p>If you want Thug to examine a single website and don&rsquo;t need an interactive shell, you could run its image like this:</p>
 <pre><code>sudo docker run --rm -it -v ~/logs:/home/thug/logs remnux/thug ./thug.py -F http://example.com
 </code></pre>
-<p>In the example above, we launched the Thug image and specified that the command to run within it should be <code>./thug.py http://example.com</code>. We also directed Docker to share the underlying host&rsquo;s ~/log directory, which is where Thug saved the results of its analysis.</p>
-<p><img alt="Non-Interactive Thug Session" src="../remnux-docker-thug2.png" /></p>
+<p>In the example above, we launched the Thug image and specified that the command to run within it should be <code>./thug.py -F http://example.com</code>. We also directed Docker to share the underlying host&rsquo;s ~/log directory, which is where Thug saved the results of its analysis.</p>
 <h2 id="viper-binary-analysis-framework-remnuxviper">Viper Binary Analysis Framework: remnux/viper</h2>
 <p><a href="http://viper.li/">Viper</a> is &ldquo;a binary management and analysis framework dedicated to malware and exploit researchers.&rdquo; It&rsquo;s useful to examine samples and maintain historical records about prior investigations. The REMnux image of this application is available in the the Docker Hub Registry as <a href="https://registry.hub.docker.com/u/remnux/viper/">remnux/viper</a>.</p>
 <p><img alt="Running remnux/viper" src="../remnux-docker-viper.gif" /></p>
