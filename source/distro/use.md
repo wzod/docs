@@ -12,7 +12,7 @@ The one-page [REMnux cheat sheet](https://zeltser.com/remnux-malware-analysis-ti
 
 To get started with the REMnux distro and become familiar with some of its capabilities, tune into the following recorded webcasts:
 
-- [Malware Analysis Essentials Using REMnux](https://www.sans.org/webcasts/malware-analysis-essentials-remnux-w-lenny-zeltser-98045) by Lenny ZEltser
+- [Malware Analysis Essentials Using REMnux](https://www.sans.org/webcasts/malware-analysis-essentials-remnux-w-lenny-zeltser-98045) by Lenny Zeltser
 - [What's New in REMnux v4](https://www.youtube.com/watch?v=4LzCr9qf5_Q) by Lenny Zeltser
 - [How to analyze malware with REMnux's reverse-engineering malware tools](http://searchsecurity.techtarget.com/video/How-to-analyze-malware-with-REMnuxs-reverse-engineering-malware-tools) by Keith Barker
 

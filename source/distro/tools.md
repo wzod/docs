@@ -61,7 +61,7 @@ For more details, including each tool's description and source, see the XLSX [sp
 - Unpacking: [UPX](http://upx.sourceforge.net/), [Bytehist](https://www.cert.at/downloads/software/bytehist_en.html), [Density Scout](http://www.cert.at/downloads/software/densityscout_en.html), [PackerID](http://handlers.sans.org/jclausing/packerid.py)
 - Disassemble: [objdump](http://en.wikipedia.org/wiki/Objdump), [Udis86](http://udis86.sourceforge.net/), [Vivisect](http://visi.kenshoto.com/viki/Vivisect)
 - Find anomalies: [Signsrch](http://aluigi.altervista.org/mytoolz.htm), [pescanner](https://code.google.com/p/malwarecookbook/source/browse/trunk/3/8/pescanner.py), [ExeScan](http://securityxploded.com/exe-scan.php), [pev](http://pev.sourceforge.net/), [Peframe](https://github.com/guelfoweb/peframe), [pedump](http://pedump.me/)
-- Investigate: [Bokken](https://inguma.eu/projects/bokken), [RATDecoders](https://github.com/kevthehermit/RATDecoders), [Pyew](https://code.google.com/p/pyew/), [readpe.py](https://github.com/crackinglandia/pype32), [PyInstaller Extractor](https://github.com/zrax/pycdc)
+- Investigate: [Bokken](https://inguma.eu/projects/bokken), [RATDecoders](https://github.com/kevthehermit/RATDecoders), [Pyew](https://code.google.com/p/pyew/), [readpe.py](https://github.com/crackinglandia/pype32), [PyInstaller Extractor](https://github.com/zrax/pycdc), [DC3-MWCP](https://github.com/Defense-Cyber-Crime-Center/DC3-MWCP)
 
 ## Investigate Mobile Malware
 
