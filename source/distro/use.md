@@ -26,5 +26,6 @@ Here are some of the blog posts and articles written about using REMnux for malw
 - [REMnux: Reverse-Engineering Malware](http://www.techrepublic.com/blog/it-security/remnux-reverse-engineering-malware/) by Michael Kassner
 - [Malware Analysis Lab - A Fast and Cost Effective "HowTo"](http://www.cybersquared.com/2012/06/malware-analysis-lab-a-fast-and-cost-effective-howto/) by ThreatConnect
 - [REMnux Tutorial: Statically Analyse Portable Executablei (PE) Files](http://www.slideshare.net/RhydhamJoshi/remnux-tutorial1-statically-analyse-portable-executablepe-files) by Rhydham Joshi, continued in [Part 2: Extraction and Decoding of Artifacts](http://www.slideshare.net/RhydhamJoshi/remnux-tutorial2-extraction-and-decoding-of-artifacts)
+- [Analyzing Office Weaponized Documents](https://dfir.it/blog/2015/06/17/analysts-handbook-analyzing-weaponized-documents/) by dfir it!
 
 If you write or locate other tutorials or articles that demonstrate the use of REMnux, please [let Lenny Zeltser know](https://zeltser.com/contact/).
