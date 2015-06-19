@@ -16,7 +16,7 @@ To get started with the REMnux distro and become familiar with some of its capab
 - [What's New in REMnux v4](https://www.youtube.com/watch?v=4LzCr9qf5_Q) by Lenny Zeltser
 - [How to analyze malware with REMnux's reverse-engineering malware tools](http://searchsecurity.techtarget.com/video/How-to-analyze-malware-with-REMnuxs-reverse-engineering-malware-tools) by Keith Barker
 
-## Articles and Blog Posts on Using REMnux
+## Articles on Using REMnux
 
 Here are some of the blog posts and articles written about using REMnux for malware analysis:
 
@@ -29,3 +29,11 @@ Here are some of the blog posts and articles written about using REMnux for malw
 - [Analyzing Office Weaponized Documents](https://dfir.it/blog/2015/06/17/analysts-handbook-analyzing-weaponized-documents/) by dfir it!
 
 If you write or locate other tutorials or articles that demonstrate the use of REMnux, please [let Lenny Zeltser know](https://zeltser.com/contact/).
+
+## Known Issues
+
+When importing the REMnux virtual appliance into an old version of VMware Workstation, Fusion or Player, you may get the error message that states, "Failed to open virtual machine: Failed to query source for information." In this case, you should upgrade to a later version of VMware software. If upgrading is not feasible, you may be able to use the [VMware OVF Tool](https://www.vmware.com/support/developer/ovf/) to convert the REMnux OVA file to the VMX format.
+
+When using VMware Fusion to run the REMnux virtual machine, the VM might stop recognizing the mouse clicks. [According to VMware](http://kb.vmware.com/selfservice/microsites/search.do?language=en_US&cmd=displayKC&externalId=2010041), this occurs when the "virtual machine detects the connected mouse as a USB device and not as a HID device. While the mouse pointer may still move within the virtual machine, mouse clicks do not register." To address the problem, edit the .VMX file of your REMnux virutal machine to include the following line:
+
+    mouse.vusb.startConnected = "FALSE"
