@@ -38,3 +38,5 @@ When importing the REMnux virtual appliance into an old version of VMware Workst
 When using VMware Fusion to run the REMnux virtual machine, the VM might stop recognizing the mouse clicks. [According to VMware](http://kb.vmware.com/selfservice/microsites/search.do?language=en_US&cmd=displayKC&externalId=2010041), this occurs when the "virtual machine detects the connected mouse as a USB device and not as a HID device. While the mouse pointer may still move within the virtual machine, mouse clicks do not register." To address the problem, edit the .VMX file of your REMnux virutal machine to include the following line:
 
     mouse.vusb.startConnected = "FALSE"
+
+A handful of people running REMnux installation or update scripts within virtual machines noticed that the antivirus tool installed on their underlying host flagged some REMnux packages as malicious and blocked their download. This is a false alarm. However, if you encounter this, you might need to disable the host's anivirus tool while running the script or whitelist the offending files or URLs to avoid getting them blocked.
