@@ -20,11 +20,11 @@ However, since you'll probably want to provide some files for V8 to examine and 
 
 In the example above, the ~/files directory will be shared between your host and the container. Before running the command above, make sure that ~/files exists and that its permissions are world-readable (i.e., `chmod a+xwr`).
 
-The remnux/v8 image includes a file that defines several objects, methods and properties that malicious JavaScript scripts running in a standalone interpreter will require. This file is located within the container in the ~/def.js location. You might need to modify it to address the needs of your sample.
+The remnux/v8 image includes a file that defines several objects, methods and properties that malicious JavaScript scripts running in a standalone interpreter will require. This file is located within the container in the ~/objects.js location. You might need to modify it to address the needs of your sample.
 
 Once in the container, you might want to invoke the V8 application using a command like this:
 
-    d8 -f ~/def.js ~/files/file.js
+    d8 -f ~/objects.js ~/files/file.js
 
 ## Thug Low-Interaction Honeyclient: remnux/thug
 
