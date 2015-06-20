@@ -224,9 +224,9 @@
 <pre><code>sudo docker run --rm -it -v ~/files:/home/nonroot/files remnux/v8 bash
 </code></pre>
 <p>In the example above, the ~/files directory will be shared between your host and the container. Before running the command above, make sure that ~/files exists and that its permissions are world-readable (i.e., <code>chmod a+xwr</code>).</p>
-<p>The remnux/v8 image includes a file that defines several objects, methods and properties that malicious JavaScript scripts running in a standalone interpreter will require. This file is located within the container in the ~/def.js location. You might need to modify it to address the needs of your sample.</p>
+<p>The remnux/v8 image includes a file that defines several objects, methods and properties that malicious JavaScript scripts running in a standalone interpreter will require. This file is located within the container in the ~/objects.js location. You might need to modify it to address the needs of your sample.</p>
 <p>Once in the container, you might want to invoke the V8 application using a command like this:</p>
-<pre><code>d8 -f ~/def.js ~/files/file.js
+<pre><code>d8 -f ~/objects.js ~/files/file.js
 </code></pre>
 <h2 id="thug-low-interaction-honeyclient-remnuxthug">Thug Low-Interaction Honeyclient: remnux/thug</h2>
 <p><a href="https://github.com/buffer/thug">Thug</a> low-interaction honeyclient can assist with the analysis of suspicious websites. The REMnux image of this application is available in the the Docker Hub Registry as <a href="https://registry.hub.docker.com/u/remnux/thug/">remnux/thug</a>.</p>
