@@ -28,6 +28,7 @@ Here are some of the blog posts and articles written about using REMnux for malw
 - [REMnux Tutorial: Statically Analyse Portable Executablei (PE) Files](http://www.slideshare.net/RhydhamJoshi/remnux-tutorial1-statically-analyse-portable-executablepe-files) by Rhydham Joshi, continued in [Part 2: Extraction and Decoding of Artifacts](http://www.slideshare.net/RhydhamJoshi/remnux-tutorial2-extraction-and-decoding-of-artifacts)
 - [Analyzing Office Weaponized Documents](https://dfir.it/blog/2015/06/17/analysts-handbook-analyzing-weaponized-documents/) by dfir it!
 - [Malicious Documents - PDF Analysis in 5 Steps](http://countuponsecurity.com/2014/09/22/malicious-documents-pdf-analysis-in-5-steps/) by Luis Rocha
+- [REMnux v6 for Malware Analysis: VolDiff](http://malwology.com/2015/06/25/remnux-v6-for-malware-analysis-part-1-voldiff/) by Anuj Soni
 
 If you write or locate other tutorials or articles that demonstrate the use of REMnux, please [let Lenny Zeltser know](https://zeltser.com/contact/).
 
