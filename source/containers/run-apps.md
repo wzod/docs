@@ -4,6 +4,8 @@ Once you've installed the desired image, as outlined below, you can update it by
 
     sudo docker images |cut -d' ' -f1 | grep -v REPOSITORY | xargs -I %s sudo docker pull %s
 
+Also, whenever practical, the containers below run applications as a non-root user. If you wish to launch them with root privileges, simply specify the parameter `-u root` to the "run" command. 
+
 ## Google's V8 JavaScript Engine: remnux/v8
 
 [Google's V8 JavaScript Engine](https://code.google.com/p/v8) can be useful for obfuscating JavaScript embedded in malicious browser pages and PDF files. The REMnux image of this application is available in the the Docker Hub Registry as [remnux/v8](https://registry.hub.docker.com/u/remnux/v8/).
