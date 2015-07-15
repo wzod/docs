@@ -221,7 +221,10 @@
 </code></pre>
 <p>On VMware Fusion, the best approach is to install proprietary VMware Tools. To do this, activate the VMware Tools installation via Virtual Machine &gt; Install VMware Tools, then run the command <code>sudo install-vmware-tools</code> on REMnux. You can install VMware Tools this way on VMware Workstation and Player as well. For additional details, see the <a href="http://kb.vmware.com/kb/1022525">VMware article on this topic</a>.</p>
 <p>Please note that if you wish to use the shared folders feature of VMware, you will need to install proprietary VMware Tools with several adjustments to compensate for a compatibility issue between VMware Tools and the Ubuntu-supplied Linux kernel. These steps are described in an <a href="http://askubuntu.com/questions/586221/vmhgfs-module-not-compilable-for-vmware-tools-9-9-0-fusion7-1-after-ubuntu-lin">article devoted to this topic</a>. A more practical option for transferring files in and out of REMnux might be to use SFTP through the installed SSH server (<code>sshd start</code>) instead of using shared folders.</p>
-<p>If using VirtualBox, consider installing Guest Additions software by following the <a href="https://www.virtualbox.org/manual/ch04.html">instructions provided by VirtualBox</a>.</p>
+<p>If using VirtualBox, consider installing Guest Additions software. To accomplish this, first shut down the REMnux virtual machine, then use the VirtalBox menu Devices &gt; Insert guest additions CD image, then start up the VM. Mount the virtual CD containing Guest Additions software like this and reboot:</p>
+<pre><code>sudo mount /dev/sr0 /mnt/cdrom
+sudo /mnt/cdrom/VBoxLinuxAdditions.*
+</code></pre>
 <h2 id="updating-your-remnux-system">Updating Your REMnux System</h2>
 <p>To update REMnux after connecting your system to the Internet, simply run the <code>update-remnux</code> command. This tool will update the software that comprises the REMnux distribution, which includes the applications installed from standard Ubuntu and the REMnux-specific repository. The updater will also installed any tools added to the distro after your last update.</p>
               
