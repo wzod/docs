@@ -46,7 +46,10 @@ On VMware Fusion, the best approach is to install proprietary VMware Tools. To d
 
 Please note that if you wish to use the shared folders feature of VMware, you will need to install proprietary VMware Tools with several adjustments to compensate for a compatibility issue between VMware Tools and the Ubuntu-supplied Linux kernel. These steps are described in an [article devoted to this topic](http://askubuntu.com/questions/586221/vmhgfs-module-not-compilable-for-vmware-tools-9-9-0-fusion7-1-after-ubuntu-lin). A more practical option for transferring files in and out of REMnux might be to use SFTP through the installed SSH server (`sshd start`) instead of using shared folders.
 
-If using VirtualBox, consider installing Guest Additions software by following the [instructions provided by VirtualBox](https://www.virtualbox.org/manual/ch04.html).
+If using VirtualBox, consider installing Guest Additions software. To accomplish this, first shut down the REMnux virtual machine, then use the VirtalBox menu Devices > Insert guest additions CD image, then start up the VM. Mount the virtual CD containing Guest Additions software like this and reboot:
+
+    sudo mount /dev/sr0 /mnt/cdrom
+    sudo /mnt/cdrom/VBoxLinuxAdditions.*
 
 ## Updating Your REMnux System
 
