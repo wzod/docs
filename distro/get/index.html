@@ -74,6 +74,9 @@
                 <li class="toctree-l3"><a href="#download-the-remnux-virtual-appliance">Download the REMnux Virtual Appliance</a></li>
                 
             
+                <li class="toctree-l3"><a href="#import-the-remnux-virtual-appliance">Import the REMnux Virtual Appliance</a></li>
+                
+            
                 <li class="toctree-l3"><a href="#install-remnux-on-an-existing-system">Install REMnux on an Existing System</a></li>
                 
             
@@ -199,9 +202,14 @@
 <h2 id="download-the-remnux-virtual-appliance">Download the REMnux Virtual Appliance</h2>
 <p>The simplest way to get the distro is to <a href="http://sourceforge.net/projects/remnux/files/version6/remnux-6.0-ova-public.ova/download">download the REMnux virtual appliance file</a> in the OVA format. </p>
 <p>The file is around 2GB in size; its SHA-256 hash is C26BE9831CA414F5A4D908D793E0B8934470B3887C48CFE82F86943236968AE6. You&rsquo;ll need to install virtualization software such as <a href="http://www.vmware.com/products/player/">VMware Player</a>, <a href="http://www.vmware.com/products/workstation/">VMware Workstation</a>, <a href="http://www.vmware.com/products/fusion/">VMware Fusion</a> and <a href="https://www.virtualbox.org/">VirtualBox</a> prior to using the REMnux virtual appliance.</p>
+<h2 id="import-the-remnux-virtual-appliance">Import the REMnux Virtual Appliance</h2>
 <p>Once you&rsquo;ve downloaded the REMnux OVA file, import it into your virtualization software, then start the virtual machine. For step-by-step instructions for importing the virtual appliance, take a look at the <a href="https://plus.google.com/photos/+REMnuxOrg/albums/6157106174723932177?authkey=CIyg87D27tymcw">VirtualBox screenshot</a> and <a href="https://plus.google.com/photos/+REMnuxOrg/albums/6157110042890668913?authkey=CI6cuIrXtoPmrAE">VMware Workstation screenshot</a> slideshows.</p>
 <p>There is no need to extract contents of the OVA file manually before importing it. Simply load the OVA file into your virtualization software to begin the import. If you attempt to extract OVA file&rsquo;s contents and try importing the embedded OVF file in VirtualBox, you will likely encounter an error, such as &ldquo;could not verify the content of REMnux.mf against the available files, unsupported digest type.&rdquo;</p>
-<p>Once you boot up the imported virtual machine, it will automatically log you into the system using the user named &ldquo;remnux&rdquo;. The user&rsquo;s password is &ldquo;malware&rdquo;; you might need to specify it when performing privileged operations.</p>
+<p>If importing into <a href="http://wiki.qemu.org/">QEMU</a>, extract contents of the OVA file and run the qemu-img command like this:</p>
+<pre><code>tar xvf remnux-6.0-ova-public.ova
+qemu-img convert -O qcow2 REMnuxV6-disk1.vmdk remnux.qcow2
+</code></pre>
+<p>In all cases, once you boot up the imported virtual machine, it will automatically log you into the system using the user named &ldquo;remnux&rdquo;. The user&rsquo;s password is &ldquo;malware&rdquo;; you might need to specify it when performing privileged operations.</p>
 <p>After booting into the virtual appliance, run the <code>update-remnux full</code> command on REMnux to update its software. This will allow you to benefit from any enhancements introduced after the virtual appliance has been packaged. Your system needs to have Internet access for this to work.</p>
 <h2 id="install-remnux-on-an-existing-system">Install REMnux on an Existing System</h2>
 <p>As an alternative to downloading the virtual appliance, you can run the REMnux installation script on an existing Ubuntu 14.04 64-bit system. This allows you to install REMnux on a physical host or a virtual machine. You can use this method to add REMnux software and settings to a brand new system or to the host you&rsquo;ve been using for a while. <a href="http://digital-forensics.sans.org/community/downloads">SIFT Workstation </a> users can utilize this approach to <a href="http://digital-forensics.sans.org/blog/2015/06/13/how-to-install-sift-workstation-and-remnux-on-the-same-forensics-system">combine SIFT and REMnux into a single system</a>.</p>
