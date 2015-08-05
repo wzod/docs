@@ -29,6 +29,7 @@ Here are some of the blog posts and articles written about using REMnux for malw
 - [Analyzing Office Weaponized Documents](https://dfir.it/blog/2015/06/17/analysts-handbook-analyzing-weaponized-documents/) by dfir it!
 - [Malicious Documents - PDF Analysis in 5 Steps](http://countuponsecurity.com/2014/09/22/malicious-documents-pdf-analysis-in-5-steps/) by Luis Rocha
 - [REMnux v6 for Malware Analysis: VolDiff](http://malwology.com/2015/06/25/remnux-v6-for-malware-analysis-part-1-voldiff/) by Anuj Soni
+- [How to Use Thug Honeyclient to Investigate a Malicious Website](http://909research.com/how-to-use-thug-honeyclient/) by John Hubbard
 
 If you write or locate other tutorials or articles that demonstrate the use of REMnux, please [let Lenny Zeltser know](https://zeltser.com/contact/).
 

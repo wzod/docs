@@ -4,7 +4,11 @@ REMnux&trade; is maintained by [Lenny Zeltser](https://zeltser.com/) with extens
 
 ## Documentation
 
-Write documentation for tools installed on the REMnux distro to expand the tips and guidelines that already exist in the [How to Use REMnux Tools](../distro/use.md) section. If you can , please format your document using the popular and easy-to-use [Markdown syntax](https://daringfireball.net/projects/markdown/basics), then [send your docs to Lenny Zeltser](https://zeltser.com/contact/). Alternatively, write-up an article explaining how to use one o fthe tools installed on REMnux and send Lenny a link.
+Help document the tools installed on the REMnux distro.
+
+Pick a [tool installed on REMnux](../distro/tools.md), then confirm that it doesn't already have a page in the [REMnux docs wiki](https://github.com/REMnux/docs/wiki). Then, document the tool by using the [documentation template](https://github.com/REMnux/docs/wiki/Documentation-Template) as a starting point. The page you write doesn't need to replace existing guides, but rather should provide a reference for REMnux distro users looking for a starting point. The page should be formatted according to the popular and easy-to-use [Markdown syntax](https://daringfireball.net/projects/markdown/basics). Once you're done, please [send your docs to Lenny Zeltser](https://zeltser.com/contact/).
+
+Alternatively, write-up an article explaining how to use one of the tools installed on REMnux and [send Lenny Zeltser]((https://zeltser.com/contact/) a link, so he can include it in the [Using REMunux and Its Tools](../distro/use.md) section of the documentation site.
 
 ## Dockerfile Configurations
 
