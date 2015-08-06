@@ -54,7 +54,7 @@ For more details, including each tool's description and source, see the XLSX [sp
 
 ## Examine Memory Snapshots
 
-- [Volatility Framework](https://github.com/volatilityfoundation/volatility), [findaes](http://jessekornblum.livejournal.com/269749.html), AESKeyFinder, RSAKeyFinder, [VolDiff](https://github.com/REMnux/docs/wiki/VolDiff), [Rekall](http://www.rekall-forensic.com/)
+- [Volatility Framework](https://github.com/volatilityfoundation/volatility), [findaes](http://jessekornblum.livejournal.com/269749.html), AESKeyFinder, RSAKeyFinder, [VolDiff](https://github.com/REMnux/docs/blob/master/tools/VolDiff.md), [Rekall](http://www.rekall-forensic.com/)
 
 ## Statically Examine PE Files
 
