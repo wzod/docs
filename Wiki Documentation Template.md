@@ -1,6 +1,6 @@
 #Name of Tool
 
-This is a template of the tool documentation note for the [REMnux documentation wiki](https://github.com/REMnux/docs/wiki/). The tool's description goes here. The overall page is meant to be a brief reference note, and is not designed to provide a comprehensive manual for using the tool. For an example of such a note, take a look at the [VolDiff page](https://github.com/REMnux/docs/wiki/VolDiff).
+This is a template of the tool documentation note for the [REMnux documentation wiki](https://github.com/REMnux/docs/wiki/). You can view its source code by clicking the Raw button. The tool's description goes here. The overall page is meant to be a brief reference note, and is not designed to provide a comprehensive manual for using the tool. For an example of such a note, take a look at the [VolDiff page](https://github.com/REMnux/docs/wiki/VolDiff).
 
 ##Category
 
