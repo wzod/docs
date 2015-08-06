@@ -1,8 +1,10 @@
-This is a template of the tool documentation note for the [REMnux documentation wiki](https://github.com/REMnux/docs/wiki/). You can view its source code by clicking the Raw button.
+# Tool Name
 
-The tool's description goes here. The overall page is meant to be a brief reference note, and is not designed to provide a comprehensive manual for using the tool. For an example of such a note, take a look at the [VolDiff page](https://github.com/REMnux/docs/wiki/VolDiff).
+This is a template of the tool documentation note for [REMnux](https://REMnux.org/). You can view its source code by clicking the Raw button.
 
-The title of the document should be the title of the tool that the note is documenting.
+The tool's description goes here. The overall page is meant to be a brief reference note, and is not designed to provide a comprehensive manual for using the tool. For an example of such a note, take a look at the [VolDiff page](VolDiff.md).
+
+The name of this file should match the name of the tool that the note is documenting and should end with the ".md" extension.
 
 ##Category
 
