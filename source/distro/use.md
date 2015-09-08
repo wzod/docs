@@ -16,7 +16,7 @@ To get started with the REMnux distro and become familiar with some of its capab
 - [What's New in REMnux v4](https://www.youtube.com/watch?v=4LzCr9qf5_Q) by Lenny Zeltser
 - [How to analyze malware with REMnux's reverse-engineering malware tools](http://searchsecurity.techtarget.com/video/How-to-analyze-malware-with-REMnuxs-reverse-engineering-malware-tools) by Keith Barker
 
-## Articles on Using REMnux
+## Articles on Using REMnux or its Tools
 
 Here are some of the blog posts and articles written about using REMnux for malware analysis:
 
@@ -30,6 +30,7 @@ Here are some of the blog posts and articles written about using REMnux for malw
 - [Malicious Documents - PDF Analysis in 5 Steps](http://countuponsecurity.com/2014/09/22/malicious-documents-pdf-analysis-in-5-steps/) by Luis Rocha
 - [REMnux v6 for Malware Analysis: VolDiff](http://malwology.com/2015/06/25/remnux-v6-for-malware-analysis-part-1-voldiff/) by Anuj Soni
 - [How to Use Thug Honeyclient to Investigate a Malicious Website](http://909research.com/how-to-use-thug-honeyclient/) by John Hubbard
+- [Hunting for IOCs with ioc-parser](https://isc.sans.edu/diary/Hunting+for+IOCs+with+iocparser/20125/) by Xavier Mertens
 
 If you write or locate other tutorials or articles that demonstrate the use of REMnux, please [let Lenny Zeltser know](https://zeltser.com/contact/).
 

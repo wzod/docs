@@ -11,8 +11,8 @@ For more details, including each tool's description and source, see the XLSX [sp
 
 ## Examine Document Files
 
-- PDF: [AnalyzePDF](https://github.com/hiddenillusion/AnalyzePDF), [Pdfobjflow](http://www.aldeid.com/wiki/Pdfobjflow), [pdfid](http://blog.didierstevens.com/programs/pdf-tools/), [pdf-parser](http://blog.didierstevens.com/programs/pdf-tools/), [peepdf](http://eternal-todo.com/tools/peepdf-pdf-analysis-tool#releases), [Origami](https://code.google.com/p/origami-pdf/), [PDF X-RAY Lite](https://github.com/9b/pdfxray_lite), [PDFtk](http://www.pdflabs.com/tools/pdftk-the-pdf-toolkit/), [swf_mastah](http://blog.9bplus.com/snatching-swf-from-pdfs-made-easier/)
-- Microsoft Office: [officeparser](https://github.com/unixfreak0037/officeparser), [pyOLEScanner.py]( https://github.com/Evilcry/PythonScripts/raw/master/), [oletools](http://www.decalage.info/python/oletools), [libolecf](https://github.com/libyal/libolecf), [oledump](http://blog.didierstevens.com/programs/oledump-py/), [emldump](https://isc.sans.edu/diary/Malicious+Word+Document+This+Time+The+Maldoc+Is+A+MIME+File/19673/), [MSGConvert](http://www.matijs.net/software/msgconv/), [base64dump.py](http://blog.didierstevens.com/2015/07/05/base64dump-py-version-0-0-1/)
+- PDF: [AnalyzePDF](https://github.com/hiddenillusion/AnalyzePDF), [Pdfobjflow](http://www.aldeid.com/wiki/Pdfobjflow), [pdfid](http://blog.didierstevens.com/programs/pdf-tools/), [pdf-parser](http://blog.didierstevens.com/programs/pdf-tools/), [peepdf](http://eternal-todo.com/tools/peepdf-pdf-analysis-tool#releases), [Origami](https://code.google.com/p/origami-pdf/), [PDF X-RAY Lite](https://github.com/9b/pdfxray_lite), [PDFtk](http://www.pdflabs.com/tools/pdftk-the-pdf-toolkit/), [swf_mastah](http://blog.9bplus.com/snatching-swf-from-pdfs-made-easier/), [qpdf](http://qpdf.sourceforge.net/), [pdfresurrect](https://github.com/enferex/pdfresurrect)
+- Microsoft Office: [officeparser](https://github.com/unixfreak0037/officeparser), [pyOLEScanner.py]( https://github.com/Evilcry/PythonScripts/raw/master/), [oletools](http://www.decalage.info/python/oletools), [libolecf](https://github.com/libyal/libolecf), [oledump](http://blog.didierstevens.com/programs/oledump-py/), [emldump](https://isc.sans.edu/diary/Malicious+Word+Document+This+Time+The+Maldoc+Is+A+MIME+File/19673/), [MSGConvert](http://www.matijs.net/software/msgconv/), [base64dump.py](http://blog.didierstevens.com/2015/07/05/base64dump-py-version-0-0-1/), [unicode](https://github.com/garabik/unicode)
 - Shellcode: [sctest](http://libemu.carnivore.it/), unicode2hex-escaped, unicode2raw, [dism-this](http://hooked-on-mnemonics.blogspot.com/2012/10/dism-thispy.html), [shellcode2exe](https://github.com/MarioVilas/shellcode_tools/blob/master/shellcode2exe.py)
 
 ## Extract and Decode Artifacts
@@ -33,7 +33,7 @@ For more details, including each tool's description and source, see the XLSX [sp
 
 ## Examine File Properties and Contents
 
-- Define signatures: [YaraGenerator](https://github.com/Xen0ph0n/YaraGenerator), [IOCextractor](https://github.com/stephenbrannon/IOCextractor), [Autorule](http://joxeankoret.com/blog/2012/04/29/extracting-binary-patterns-in-malware-sets-and-generating-yara-rules/), [Rule Editor](https://github.com/ifontarensky/RuleEditor)
+- Define signatures: [YaraGenerator](https://github.com/Xen0ph0n/YaraGenerator), [IOCextractor](https://github.com/stephenbrannon/IOCextractor), [Autorule](http://joxeankoret.com/blog/2012/04/29/extracting-binary-patterns-in-malware-sets-and-generating-yara-rules/), [Rule Editor](https://github.com/ifontarensky/RuleEditor), [ioc-parser](https://github.com/armbues/ioc_parser)
 - Scan: [Yara](http://plusvic.github.io/yara/), [ClamAV](http://www.clamav.net/), [TrID](http://mark0.net/soft-trid-e.html), [ExifTool](http://www.sno.phy.queensu.ca/~phil/exiftool/), [virustotal-submit](http://blog.didierstevens.com/programs/virustotal-tools/), [Disitool](http://blog.didierstevens.com/programs/disitool/)
 - Hashes: [nsrllookup](https://github.com/rjhansen/nsrllookup), [Automater](http://www.tekdefense.com/automater/), [Hash Identifier](https://code.google.com/p/hash-identifier/), [totalhash](https://gist.github.com/malc0de/10270150), [ssdeep](http://ssdeep.sourceforge.net/), [virustotal-search](http://blog.didierstevens.com/programs/virustotal-tools/), [VirusTotalApi](https://github.com/doomedraven/VirusTotalApi)
 
@@ -76,3 +76,5 @@ For more details, including each tool's description and source, see the XLSX [sp
 - [Metasploit](https://github.com/rapid7/metasploit-framework) is not installed on REMnux; however, [you can install it yourself](https://zeltser.com/install-metasploit-on-remnux/) if the need arises.
 
 - [WIPSTER](https://github.com/TheDr1ver/WIPSTER) offers a web-based interface to several REMnux tools. You can easily install WIPSTER on REMnux by running the command `install-wipster`.
+
+- [BinNavi](https://github.com/google/binnavi) is a tool for statically examining disassembled code. You can install it on REMnux by running the command `install-binnavi`.
