@@ -27,7 +27,8 @@ Options:
 
 Before running the Docker image, create the ~/crits-data directory on the host system and make it world-accessible:
 
-    chmod a+xwr
+    mkdir -pv ~/crits-data
+    chmod a+xwr ~/crits-data
 
 Once the Docker image is loaded and CRITs is fully instantiated, access the CRITs web interface by entering the following into a web browser:
 
